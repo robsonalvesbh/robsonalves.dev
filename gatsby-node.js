@@ -1,7 +1,21 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const { createFilePath } = require('gatsby-source-filesystem')
+const path = require('path')
 
-// You can delete this file if you're not using it
+// Add slug field to each post
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: 'pages'
+    })
+
+    createNodeField({
+      name: 'slug',
+      node,
+      value: `/${slug.slice(12)}`,
+    })
+  }
+}
