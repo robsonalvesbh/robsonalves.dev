@@ -1,8 +1,8 @@
 ---
 date: 2017-07-21 22:52:42
-title: 'Criando um Pixel Tracking com PHP'
+title: "Criando um Pixel Tracking com PHP"
 description: Pixel Tracking é um técnica muito utilizada para rastrear emails e saber quando eles forem lidos.
-tags: [php]
+tags: [PHP]
 ---
 
 Pixel Tracking é uma técnica amplamente utilizada para rastrear atividades de usuários na internet. Você já notou que sempre
@@ -30,14 +30,14 @@ a resposta da requisição será uma imagem no formato `.gif`.
 ```php
 <?php
 
-  /** 
-  * Define que o retorno será um arquivo .gif 
+  /**
+  * Define que o retorno será um arquivo .gif
   **/
   header("Content-Type: image/gif");
 
-  /** 
-  * lê o pixel que deverá está no mesmo diretório que seu arquivo .php, 
-  * caso não esteja, informe o caminho correto do arquivo abaixo 
+  /**
+  * lê o pixel que deverá está no mesmo diretório que seu arquivo .php,
+  * caso não esteja, informe o caminho correto do arquivo abaixo
   **/
   readfile('pixel.gif');
 
@@ -52,7 +52,9 @@ Veja como é simples fazer a inclusão do pixel na página que você deseja rast
 na url, _email_, _parametro2_ e _parametro3_.
 
 ```html
-<img src="http://<seu_site.com>/pixelTracking.php?email=nome@site.com&parametro2=xxx&parametro3=xpto">
+<img
+  src="http://<seu_site.com>/pixelTracking.php?email=nome@site.com&parametro2=xxx&parametro3=xpto"
+/>
 ```
 
 Você pode incluir quantos parâmetros desejar, mas lembre-se, como é uma requisição do tipo `GET`, os parâmetros vão direto na URL,
