@@ -6,13 +6,14 @@ import Tags from '../Tags'
 
 import * as S from './styled'
 import Comments from '../Comments'
+import Separator from '../Separator'
 
 const Post = ({ title, html, date, timeToRead, tags, nextPost, previousPost, slug }) => {
   return (
     <>
       <S.PostHeader>{title}</S.PostHeader>
       <S.PostDate>{date} - {timeToRead} min read</S.PostDate>
-      <S.PostItemSeparate />
+      <Separator />
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: html }}></div>
       </S.MainContent>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import * as S from './styled'
 import Tags from '../Tags'
+import Separator from '../Separator'
 
 const PostItem = ({
   slug,
@@ -21,7 +22,7 @@ const PostItem = ({
       <S.postItemDescription>{description}</S.postItemDescription>
       <Tags tags={tags} />
     </S.postItemWrapper>
-    <S.PostItemSeparate />
+    <Separator />
   </>
 )
 

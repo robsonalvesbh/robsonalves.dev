@@ -13,17 +13,9 @@ export const PostHeader = styled.header`
   color: #126ab1;
 `
 
-export const PostItemSeparate = styled.hr`
-  margin: 32px 0;
-  background: var(--borders);
-  height: 1px;
-  border-style: none;
-`
-
 export const MainContent = styled.section`
   margin-top: 1.2rem;
   margin-bottom: 2.2rem;
-
   p,
   h1,
   h2,
