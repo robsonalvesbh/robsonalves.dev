@@ -14,7 +14,7 @@ export const TitleLink = styled(AniLink)`
   color: var(--logo-color);
   font-size: 2em;
   background-color: var(--logo-background);
-  padding: 10px 13px;
+  padding: 0.625rem 0.8125rem;
   text-decoration: none;
 
   :hover {

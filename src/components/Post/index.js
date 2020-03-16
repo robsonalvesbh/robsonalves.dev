@@ -17,7 +17,9 @@ const Post = ({ title, html, date, timeToRead, tags, nextPost, previousPost, slu
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: html }}></div>
       </S.MainContent>
-      <Tags tags={tags} />
+      <S.TagsWrapper>
+        <Tags tags={tags} />
+      </S.TagsWrapper>
       <RecommendedPosts next={nextPost} previous={previousPost} />
       <Comments slug={slug} title={title} />
     </>

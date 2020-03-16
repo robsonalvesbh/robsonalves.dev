@@ -10,8 +10,8 @@ export const TagItem = styled.li`
   color: var(--logo-color);
   vertical-align: baseline;
   font-size: 100%;
-  margin-right: 6px;
-  margin-bottom: 5px;
+  margin-right: 0.375rem;
+  margin-bottom: 0.3125rem;
   font: 1em -apple-system-headline, "Droid Sans Mono", Courier, mono;
 
   :hover {

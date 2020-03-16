@@ -18,8 +18,8 @@ export const MenuLinkItem = styled.li``
 
 export const MenuLinkLink = styled(AniLink)`
   color: var(--logo-color);
-  padding: 8px 9px;
-  margin: 0 -10px 0;
+  padding: 0.5rem 0.5625rem;
+  margin: 0 -0.625rem 0;
   text-decoration: none;
 
   &:hover {

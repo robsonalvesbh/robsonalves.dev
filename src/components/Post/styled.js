@@ -1,19 +1,43 @@
 import styled from 'styled-components'
+import media from "styled-media-query"
+
+export const TagsWrapper = styled.section`
+  ${media.lessThan("large")`
+    margin-left: 1.6rem;
+  `}
+`
 
 export const PostDate = styled.time`
   color: var(--texts);
   font-size: 1.1rem;
   font-weight: 100;
+
+  ${media.lessThan("large")`
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  `}
 `
 
 export const PostHeader = styled.header`
-  margin-top: 1.2em;
+  margin-top: 4.8rem;
   margin-bottom: 0.3em;
   font-size: 4rem;
   color: #126ab1;
+  
+  ${media.lessThan("large")`
+    margin-top: 2rem;
+    font-size: 2.8rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  `}
 `
 
 export const MainContent = styled.section`
+  ${media.lessThan("large")`
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  `}
+
   margin-top: 1.2rem;
   margin-bottom: 2.2rem;
   p,
@@ -122,7 +146,7 @@ export const MainContent = styled.section`
   table > thead > tr > td,
   table > tbody > tr > td,
   table > tfoot > tr > td {
-      padding: 10px;
+      padding: 0.625rem;
       line-height: 1.42857143;
       vertical-align: top;
       border: 1px solid var(--borders);
