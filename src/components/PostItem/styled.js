@@ -42,10 +42,3 @@ export const postItemDescription = styled.p`
   line-height: 2;
   letter-spacing: .01rem;
 `
-
-export const PostItemSeparate = styled.hr`
-  margin: 32px 0;
-  background: var(--borders);
-  height: 1px;
-  border-style: none;
-`
