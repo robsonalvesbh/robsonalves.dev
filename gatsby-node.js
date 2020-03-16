@@ -1,9 +1,21 @@
-const { createFilePath } = require('gatsby-source-filesystem')
-const path = require('path')
+const {
+  createFilePath
+} = require('gatsby-source-filesystem')
+
+const {
+  createPageByPost,
+  createPageByTags
+} = require('./src/scripts/createPages')
 
 // Add slug field to each post
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = ({
+  node,
+  actions,
+  getNode
+}) => {
+  const {
+    createNodeField
+  } = actions
 
   if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({
@@ -20,9 +32,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-// create page for each post
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+// create pages
+exports.createPages = ({
+  graphql,
+  actions
+}) => {
+  const {
+    createPage
+  } = actions
 
   return graphql(`
     {
@@ -31,6 +48,9 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             fields {
               slug
+            }
+            frontmatter {
+              tags
             }
           }
           next {
@@ -53,16 +73,12 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    result.data.allMarkdownRemark.edges.map(({ node, next, previous }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve('./src/templates/blog-post.js'),
-        context: {
-          slug: node.fields.slug,
-          nextPost: previous,
-          previousPost: next,
-        }
-      })
-    })
+    const nodes = result.data.allMarkdownRemark.edges
+
+    // create pages for post
+    createPageByPost(createPage, nodes)
+
+    // create pages for tags
+    createPageByTags(createPage, nodes)
   })
 }
