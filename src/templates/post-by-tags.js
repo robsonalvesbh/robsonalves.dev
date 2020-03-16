@@ -6,13 +6,13 @@ import PostItem from '../components/PostItem'
 import SEO from '../components/Seo'
 import PageTitle from '../components/PageTitle'
 
-const PostsByTag = ({ data }) => {
+const PostsByTag = ({ data, pageContext }) => {
   const postList = data.allMarkdownRemark.edges
 
   return (
     <Layout>
       <SEO title='Tags' />
-      <PageTitle>TAGS</PageTitle>
+      <PageTitle>TAG: {pageContext.tag}</PageTitle>
       
 
       {postList.map(({
