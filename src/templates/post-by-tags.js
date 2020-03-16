@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostItem from '../components/PostItem'
 import SEO from '../components/Seo'
+import PageTitle from '../components/PageTitle'
 
 const PostsByTag = ({ data }) => {
   const postList = data.allMarkdownRemark.edges
@@ -11,8 +12,9 @@ const PostsByTag = ({ data }) => {
   return (
     <Layout>
       <SEO title='Tags' />
-      <h1>Tags</h1>
-      <hr />
+      <PageTitle>TAGS</PageTitle>
+      
+
       {postList.map(({
         node: { 
           fields: { slug },
