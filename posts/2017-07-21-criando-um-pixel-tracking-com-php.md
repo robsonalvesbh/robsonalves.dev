@@ -7,6 +7,7 @@ date: 2017-07-21T22:52:42.000Z
 tags:
   - PHP
 thumbnail: assets/img/conversion-tracking-adwords-analytics.png
+image: assets/img/conversion-tracking-adwords-analytics.png
 ---
 Pixel Tracking é uma técnica amplamente utilizada para rastrear atividades de usuários na internet. 
 
