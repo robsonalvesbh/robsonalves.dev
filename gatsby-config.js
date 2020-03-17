@@ -1,7 +1,5 @@
 require('dotenv').config()
 
-const queries = require("./src/scripts/algoliaQuery")
-
 const pluginConfig = [
   `gatsby-plugin-transition-link`,
   `gatsby-plugin-styled-components`,
@@ -116,6 +114,8 @@ const pluginConfig = [
 ]
 
 if (process.env.CONTEXT === 'production') {
+  const queries = require("./src/scripts/algoliaQuery")
+  
   const algolia = {
     resolve: `gatsby-plugin-algolia-search`,
     options: {
