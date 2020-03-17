@@ -13,6 +13,11 @@ const MenuLinks = () => (
           </S.MenuLinkLink>
         </S.MenuLinkItem>
       ))}
+        <S.MenuLinkItem>
+          <a href="/feed.xml" target="__blank">
+            Feed
+          </a>
+        </S.MenuLinkItem>
     </S.MenuLinkList>
   </S.menuWrapper>
 )

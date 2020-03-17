@@ -10,11 +10,7 @@ const links = [
   {
     label: 'Tags',
     url: '/tags'
-  },
-  {
-    label: 'Feed',
-    url: '/feed.xml'
-  },
+  }
 ]
 
 export default links

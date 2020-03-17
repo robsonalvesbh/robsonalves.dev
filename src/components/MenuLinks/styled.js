@@ -14,7 +14,24 @@ export const MenuLinkList = styled.ul`
   list-style: none;
 `
 
-export const MenuLinkItem = styled.li``
+export const MenuLinkItem = styled.li`
+  a {
+    color: var(--logo-color);
+    padding: 0.5rem 0.5625rem;
+    margin: 0 -0.625rem 0;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--highlight);
+      opacity: 0.8;
+    }
+
+    &.active {
+      color: var(--highlight);
+      opacity: 0.8;
+    }
+  }
+`
 
 export const MenuLinkLink = styled(AniLink)`
   color: var(--logo-color);
