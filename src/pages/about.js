@@ -17,23 +17,26 @@ const AboutPage = () => (
       <article>
         <p>
             Meu nome é Robson Alves, sou graduado em ciência da computação, trabalho com desenvolvimento web há mais
-            de 5 anos, atualmente sou engenheiro de software na <a href="https://www.maxmilhas.com.br/">Maxmilhas</a> e
-            trabalho como freelance nas horas vagas,
-            já tive a oportunidade de participar em projetos de grandes empresas como: SambaTech, Cielo, Totvs, Kroton,
-            entre outras.
+            de 6 anos, atualmente sou engenheiro de software na <a href="https://www.olx.com.br/">OLX</a> e
+            trabalho como freelance nas horas vagas, já tive a oportunidade de participar em projetos de grandes empresas como: 
+            Maxmilhas, SambaTech, Cielo, Totvs, Kroton, entre outras.
         </p>
 
         <p>
-            Sou fascinado pela dinâmica que o desenvolvimento me proporciona, sou viciado em boas praticas, clean code,
+            Sou fascinado pela dinâmica que o desenvolvimento me proporciona, viciado em boas praticas, clean code, arquitetura de software,
             amo trabalhar em aplicações altamente escaláveis e que tenham um propósito. ;-)
         </p>
 
         <h2>Hard skills</h2>
 
         <ul>
-            <li>PHP 7 - Symfony - Laravel</li>
-            <li>NodeJS 8</li>
+            <li>NodeJS</li>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>React - React Native</li>
+            <li>AWS</li>
             <li>MySQL - PostgreSQL - MongoDB</li>
+            <li>TDD - Continuous Integration</li>
             <li>Git - GitFlow</li>
             <li>Docker - Vagrant</li>
             <li>Scrum - Kamban</li>
@@ -55,8 +58,8 @@ const AboutPage = () => (
         <h2>Idiomas</h2>
 
         <ul>
-            <li>Espanhol (Avançado)</li>
-            <li>Inglês (Upper intermediate)</li>
+            <li>Espanhol</li>
+            <li>Inglês</li>
         </ul>
 
         <h2>Contato</h2>
@@ -64,6 +67,7 @@ const AboutPage = () => (
         <ul>
             <li><a href="https://www.linkedin.com/in/robsonalvesbh/">Linkedin</a></li>
             <li><a href="https://github.com/robsonalvesbh">Github</a></li>
+            <li><a href="https://twitter.com/robsonalvesdev">Twitter</a></li>
         </ul>
 
         <p>
