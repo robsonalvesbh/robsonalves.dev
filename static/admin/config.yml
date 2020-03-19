@@ -2,7 +2,7 @@ backend:
   name: github
   repo: robsonalvesbh/robsonalves.dev
   branch: master
-  site_domain: https://robsonalves.dev/
+  site_domain: robsonalves.dev
 
 publish_mode: editorial_workflow
 media_folder: static/assets/img
