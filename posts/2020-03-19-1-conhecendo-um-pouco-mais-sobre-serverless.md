@@ -15,8 +15,6 @@ Uma analogia que gosto bastante e que exemplifica bem este conceito é de que Se
 
 Para começar, veremos brevemente como a infraestrutura dos servidores e nossa responsabilidade sobre os Servidores evoluiu até chegarmos a neste conceito e prós e cróntra dessa tecnologia.
 
-
-
 ## Evolução do Serverless
 
 ![serverless evolucao](assets/img/serverless-evolution.png "serverless evolucao")
@@ -41,15 +39,17 @@ O conceito Serverless surgiu com o propósito de abstrair completamente a infrae
 
 Diferentemente das arquiteturas anteriores no Serverless você só paga quando sua aplicação é executada e isso é um dos principais motivos por ele ter se popularizado.
 
-
-
 ## Tipos de Serverless
 
 Serverless é um modelo de Infraestrutura e portanto existem mais de um tipo e eles **BaaS** e **FaaS**.
 
 ### BaaS - Backend as a Service
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod laoreet imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies, ipsum eu aliquet varius, nisi ex feugiat leo, in lacinia justo odio at dui. Duis vitae aliquam velit. Donec molestie tincidunt leo. Vestibulum id neque in neque imperdiet facilisis. Fusce a lectus ante. Vivamus blandit nunc et mollis aliquam.
+Imagine que você vai iniciar o desenvolvimento de um aplicativo mobile e vai precisar implementar login com facebook, acessar banco de dados e armazenar arquivos, agora e se eu falasse que todas essas features já estão implementadas do lado do servidor e que estão disponíveis através de uma API simples de integrar?
+
+A ideia do BaaS é exatamente essa, fornecer uma grande variedade de recursos em forma de APIs para que você poder utilizar em suas aplicações, seja web ou mobile, sem precisar se preocupar com a implementação e nem com a infraestrutura.
+
+Um dos mais populares serviços de BaaS hoje é o [Firebase](https://firebase.google.com/) do google.
 
 ### FaaS — Function as a Service
 
