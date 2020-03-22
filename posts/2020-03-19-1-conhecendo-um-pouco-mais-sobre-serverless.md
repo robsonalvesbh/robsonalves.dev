@@ -13,13 +13,11 @@ O nome Serverless é um tanto quando contraditório, e na maioria das vezes acab
 
 Uma analogia que gosto bastante e que exemplifica bem este conceito é de que Servereless é como o Wifi, mesmo que você esteja se conectando a uma rede sem fio, ainda há muitos cabos envolvidos, você só não precisa se preocupar com eles.
 
-![Roteador com muitos cabos conectados](assets/img/wireless-router-with-multiple-connected-cables-1024x684.jpg "Roteador com muitos cabos conectados")
-
 Antes de entrarmos em mais detalhes sobre Serverless, vamos ver brevemente como  nossa infra e nossa responsabilidade evoluiu até chegarmos a neste conceito.
 
 ## Evolução do Serverless
 
-![](assets/img/serverless-evolution.png "serverless evolucao")
+![serverless evolucao](assets/img/serverless-evolution.png "serverless evolucao")
 
 ### Infraestrutura In-house
 
@@ -37,9 +35,27 @@ Hoje a maiorias das aplicações web estão em clouds.
 
 ### Serverless
 
-O conceito Serverless surgiu com o propósito de abstrair completamente a infraestrutura do lado do servidor, não precisamos mais nos preocupar com software e muito menos com o hardware que está rodando nossa aplicação e diferentemente das arquiteturas anteriores, Serverless você só paga quando sua aplicação é executada.
+O conceito Serverless surgiu com o propósito de abstrair completamente a infraestrutura do lado do servidor, não precisamos mais nos preocupar com software e muito menos com o hardware que está rodando nossa aplicação, com a infraestrutura transparente podemos focar em nossa aplicação e em nossas regras de negocio.
 
-nos deixando livres para focarmos em nossa aplicação sem se preocupar com a infraestrutura.
+Diferentemente das arquiteturas anteriores no Serverless você só paga quando sua aplicação é executada e isso é um dos principais motivos por ele ter se popularizado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Serverless é uma categoria e existem mais de um tipo de serverless que são Baas e Faas
 
