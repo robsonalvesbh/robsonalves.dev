@@ -39,30 +39,16 @@ O conceito Serverless surgiu com o propósito de abstrair completamente a infrae
 
 Diferentemente das arquiteturas anteriores no Serverless você só paga quando sua aplicação é executada e isso é um dos principais motivos por ele ter se popularizado.
 
+## Tipos de Serverless
 
+Serverless é uma categoria e existem mais de um tipo de serverless que são BaaS e FaaS.
 
+### BaaS - Backend as a Service
 
+### FaaS — Function as a Service
 
+### Série de artigos sobre Serverless 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Serverless é uma categoria e existem mais de um tipo de serverless que são Baas e Faas
-
-Nessa serie de artigos vou focar mais em Faas mais especificamente no aws lambda.
-
-### FaaS — Function as a Service Beneficios do serverless
-
-No servers to provision or manage Scales with usage Pay-only usage Built-in availability and fault tolerance
+Este artigo  artigos vou focar em Faas mais especificamente no AWS Lambda, 
 
 Quais são as suas principais dúvidas sobre Serverless? Por favor, deixe nos comentários!
