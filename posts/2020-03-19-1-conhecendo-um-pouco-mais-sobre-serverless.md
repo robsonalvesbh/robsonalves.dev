@@ -9,11 +9,13 @@ image: assets/img/0_i9jz_tck8frzyao8.png
 ---
 ![Meme do batman, Robin disse que existem servidores no Serverless e o Batman bate na cara dele falando que esse não é o ponto](assets/img/0_i9jz_tck8frzyao8.png "Meme batman")
 
-O nome Serverless é um tanto quando contraditório, e na maioria das vezes acabam gerando confusão, mas uma coisa você pode ter certeza ainda não conseguiram eliminar a necessidade de se ter um servidor. 
+O nome Serverless é um tanto quando contraditório, e na maioria das vezes acaba gerando confusão, mas uma coisa você pode ter certeza ainda não conseguiram eliminar a necessidade de se ter um servidor. 
 
 Uma analogia que gosto bastante e que exemplifica bem este conceito é de que Servereless é como o Wifi, mesmo que você esteja se conectando a uma rede sem fio, ainda há muitos cabos envolvidos, você só não precisa se preocupar com eles.
 
-Antes de entrarmos em mais detalhes sobre Serverless, vamos ver brevemente como  nossa infra e nossa responsabilidade evoluiu até chegarmos a neste conceito.
+Para começar, veremos brevemente como a infraestrutura dos servidores e nossa responsabilidade sobre os Servidores evoluiu até chegarmos a neste conceito e prós e cróntra dessa tecnologia.
+
+
 
 ## Evolução do Serverless
 
@@ -39,16 +41,41 @@ O conceito Serverless surgiu com o propósito de abstrair completamente a infrae
 
 Diferentemente das arquiteturas anteriores no Serverless você só paga quando sua aplicação é executada e isso é um dos principais motivos por ele ter se popularizado.
 
+
+
 ## Tipos de Serverless
 
-Serverless é uma categoria e existem mais de um tipo de serverless que são BaaS e FaaS.
+Serverless é um modelo de Infraestrutura e portanto existem mais de um tipo e eles **BaaS** e **FaaS**.
 
 ### BaaS - Backend as a Service
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod laoreet imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies, ipsum eu aliquet varius, nisi ex feugiat leo, in lacinia justo odio at dui. Duis vitae aliquam velit. Donec molestie tincidunt leo. Vestibulum id neque in neque imperdiet facilisis. Fusce a lectus ante. Vivamus blandit nunc et mollis aliquam.
+
 ### FaaS — Function as a Service
 
-### Série de artigos sobre Serverless 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod laoreet imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies, ipsum eu aliquet varius, nisi ex feugiat leo, in lacinia justo odio at dui. Duis vitae aliquam velit. Donec molestie tincidunt leo. Vestibulum id neque in neque imperdiet facilisis. Fusce a lectus ante. Vivamus blandit nunc et mollis aliquam.
 
-Este artigo  artigos vou focar em Faas mais especificamente no AWS Lambda, 
+## Vantagens e Desvantagens
 
-Quais são as suas principais dúvidas sobre Serverless? Por favor, deixe nos comentários!
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod laoreet imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies, ipsum eu aliquet varius, nisi ex feugiat leo, in lacinia justo odio at dui. Duis vitae aliquam velit. Donec molestie tincidunt leo. Vestibulum id neque in neque imperdiet facilisis. Fusce a lectus ante. Vivamus blandit nunc et mollis aliquam.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod laoreet imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies, ipsum eu aliquet varius, nisi ex feugiat leo, in lacinia justo odio at dui. Duis vitae aliquam velit. Donec molestie tincidunt leo. Vestibulum id neque in neque imperdiet facilisis. Fusce a lectus ante. Vivamus blandit nunc et mollis aliquam.
+
+## Série de artigos sobre Serverless
+
+Este artigo da inicio a uma serie de outros artigos que vou escrever sobre Serverless com o foco em FaaS mais especificamente AWS Lambda que é o tenho mais experiência, segue alguns outros assuntos que penso em abordar por aqui:
+
+* AWS Lambda
+* Framework Serverless
+
+  Dentro deste contexto, quero fazer pocket posts (posts rápidos) demonstrando como configurar pelo arquivo de configuração que o framework fornece alguns recursos da AWS, segue alguns exemplos:
+
+  * SNS, SQS, S3
+  * API Gateway
+  * VPC
+  * CloudWatch Events
+  * CloudWatch Alerts
+  * SNS Filtering
+* Boas praticas de organização de código entre os lambdas de aplicações complexas
+
+Deixe um comentário deixando suas principais dúvidas sobre Serverless ou tópicos que você gostasse que eu abordasse por aqui!
