@@ -51,20 +51,23 @@ Um dos mais populares serviços de BaaS hoje é o [Firebase](https://firebase.go
 
 ### FaaS - Function as a Service
 
-A função como serviço (FaaS) é uma maneira sem servidor de executar trechos de código modulares no limite. O FaaS permite que os desenvolvedores escrevam e atualizem um código em tempo real, que pode ser executado em resposta a um evento, como um usuário clicando em um elemento em um aplicativo Web. Isso facilita o dimensionamento do código e é uma maneira econômica de implementar microsserviços.
-
-
-## Vantagens e Desvantagens
-
-Reduced operational cost BaaS: reduced development cost
-Time to market and continuous experimentation
-Reduced packaging and deployment complexity
-
-Execution duration Startup latency
-Vendor lock-in
-
-\
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod laoreet imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies, ipsum eu aliquet varius, nisi ex feugiat leo, in lacinia justo odio at dui. Duis vitae aliquam velit. Donec molestie tincidunt leo. Vestibulum id neque in neque imperdiet facilisis. Fusce a lectus ante. Vivamus blandit nunc et mollis aliquam.
+
+## Vantagens
+
+* **Redução de custo:** Além de não precisar tempo e dinheiro provisionando a infraestrutura, Serverless você não pagar pelo tempo ocioso, você paga apenas quando seu código está sendo executado.
+
+* **Tempo para entregar valor:** Com o foco voltado para o código você ganha agilidade e velocidade nas entregas. 
+
+* **Experimentação continua:** Com a redução de custos e possibilidade de realizar entregas mais rápidas, isso permite uma mentalidade de desenvolvimento de produto de experimentação contínua
+
+* **Escalável:**
+
+## Desvantagens
+
+* Duração de execução     
+* Tempo de inicialização
+* Bloqueio com fornecedor
 
 ## Série de artigos sobre Serverless
 
