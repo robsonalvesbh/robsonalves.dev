@@ -63,7 +63,7 @@ Afinal de contas o que essas funções? Resumidamente, são blocos de códigos q
 
 Como é de se imaginar não precisamos nos preocupar com o gerenciamento dos servidores, o escalamento dinâmico, além de ser econômico, pois os provedores cobram somente pelos recursos efetivamente usados, e não pelo tempo ocioso.
 
-Os FaaS mais populares são:
+Os provedores de FaaS mais populares são:
 
 * AWS Lambda
 * Google Cloud Functions
@@ -72,28 +72,28 @@ Os FaaS mais populares são:
 
 ## Vantagens e Desvantagens
 
+Provavelmente você já deve ter percebido algumas vantagens de se utilizar uma arquitetura serverles, mas vamos ver os prós e contras de se utilizar
+
 ### Vantagens
 
 * Sem responsabilidade pelo gerenciamento de servidores.
 * Escalabilidade gerenciada pelo provedor.
 * Com o foco voltado para o código você ganha agilidade e velocidade nas entregas. 
 * Sem cobrança pelo tempo ocioso, você paga apenas quando seu código está sendo executado.
-
-  Experimentação continua: Com a redução de custos e possibilidade de realizar entregas mais rápidas, isso permite uma mentalidade de desenvolvimento de produto de experimentação contínua
-
-Consumo e cobrança de recursos apenas quando necessário. As funções podem ser escritas em quase todas as linguagens de programação.
+* Suporte a várias linguagens de programação.
 
 ### Desvantagens
 
-* Duração de execução     
-* Tempo de inicialização
-* Bloqueio com fornecedor
+* Bloqueio com provedor: Migrar sua aplicação para outro provedor poderá ser uma dor de cabeça.
+* Por ser limitações de FaaS, falarei no artigo sobre AWS Lambda sobre outras desvantagens como:
+  * Limite do tempo de execução
+  * Tempo de inicialização (latência)
 
 ## Série de artigos sobre Serverless
 
-Para finalizar, este artigo da inicio a uma serie de outros que vou escrever sobre Serverless com o foco em FaaS mais especificamente [AWS Lambda](https://aws.amazon.com/pt/lambda/) que é o mais tenho experiência, segue alguns tópicos que penso em abordar por aqui:
+Para finalizar, este artigo da inicio a uma serie de outros que vou escrever sobre Serverless com o foco em FaaS, mais especificamente falarei sobre [AWS Lambda](https://aws.amazon.com/pt/lambda/) pois é o que tenho mais experiência, segue alguns tópicos que penso em abordar por aqui:
 
-* AWS Lambda
+* AWS Lambda (Como funciona, preços e exemplos de aplicações)
 * Framework Serverless
 
   Dentro deste contexto, quero fazer pocket posts (posts rápidos) demonstrando como configurar pelo arquivo de configuração que o framework fornece alguns recursos da AWS, segue alguns exemplos:
