@@ -33,7 +33,7 @@ Hoje a maiorias das aplicações web estão em clouds.
 
 ### Serverless
 
-O conceito Serverless surgiu com o propósito de abstrair completamente a infraestrutura do lado do servidor, não precisamos mais nos preocupar com software e muito menos com o hardware que está rodando nossa aplicação, com a infraestrutura transparente podemos focar em nossa aplicação e em nossas regras de negocio.
+O conceito Serverless surgiu com o propósito de abstrair completamente a infraestrutura do lado do servidor, não precisamos mais nos preocupar com software e muito menos com o hardware que está rodando nossa aplicação, com a infraestrutura transparente podemos concentrar nossos esforços na escrita do código e em gerar valor para o negócio.
 
 Diferentemente das arquiteturas anteriores no Serverless você só paga quando sua aplicação é executada e isso é um dos principais motivos por ele ter se popularizado.
 
@@ -51,19 +51,39 @@ Um dos mais populares serviços de BaaS hoje é o [Firebase](https://firebase.go
 
 ### FaaS - Function as a Service
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod laoreet imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies, ipsum eu aliquet varius, nisi ex feugiat leo, in lacinia justo odio at dui. Duis vitae aliquam velit. Donec molestie tincidunt leo. Vestibulum id neque in neque imperdiet facilisis. Fusce a lectus ante. Vivamus blandit nunc et mollis aliquam.
+Com os sistemas cada vez mais modularizados os Microservices estão por toda parte e  com o surgimento do FaaS começou a se popularizar um novo conceito que são os Nanoservices.
 
-## Vantagens
+Se imaginarmos uma API no contexto de Nanoservices iriamos ter cada um de seus endpoints separados em uma função, veja como ficaria na imagem abaixo: 
 
-* **Redução de custo:** Além de não precisar tempo e dinheiro provisionando a infraestrutura, Serverless você não pagar pelo tempo ocioso, você paga apenas quando seu código está sendo executado.
+![Nanoservices - representação de vários endpoints e cada um apontando para uma função](assets/img/0_bn6fy8gksznumy1q.png "Nanoservices - representação de vários endpoints e cada um apontando para uma função")
 
-* **Tempo para entregar valor:** Com o foco voltado para o código você ganha agilidade e velocidade nas entregas. 
+Existem algumas vantagens em utilizar esse tipo de abordagem, como: poder escalar os endpoints separadamente, não gerar concorrência entre os endpoints, se um endpoint "crashar" os outros continuam funcionando, entre outras.
 
-* **Experimentação continua:** Com a redução de custos e possibilidade de realizar entregas mais rápidas, isso permite uma mentalidade de desenvolvimento de produto de experimentação contínua
+Afinal de contas o que essas funções? Resumidamente, são blocos de códigos que são executadas em [contâiners stateless](https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter) sob demanda. Existem diversos tipos de eventos que podem invocar sua função, como: Requisições HTTP, Schedulers e Triggers.
 
-* **Escalável:**
+Como é de se imaginar não precisamos nos preocupar com o gerenciamento dos servidores, o escalamento dinâmico, além de ser econômico, pois os provedores cobram somente pelos recursos efetivamente usados, e não pelo tempo ocioso.
 
-## Desvantagens
+Os FaaS mais populares são:
+
+* AWS Lambda
+* Google Cloud Functions
+* Microsoft Azure Functions (open source)
+* OpenFaaS (open source)
+
+## Vantagens e Desvantagens
+
+### Vantagens
+
+* Sem responsabilidade pelo gerenciamento de servidores.
+* Escalabilidade gerenciada pelo provedor.
+* Com o foco voltado para o código você ganha agilidade e velocidade nas entregas. 
+* Sem cobrança pelo tempo ocioso, você paga apenas quando seu código está sendo executado.
+
+  Experimentação continua: Com a redução de custos e possibilidade de realizar entregas mais rápidas, isso permite uma mentalidade de desenvolvimento de produto de experimentação contínua
+
+Consumo e cobrança de recursos apenas quando necessário. As funções podem ser escritas em quase todas as linguagens de programação.
+
+### Desvantagens
 
 * Duração de execução     
 * Tempo de inicialização
@@ -71,13 +91,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod lao
 
 ## Série de artigos sobre Serverless
 
-Este artigo da inicio a uma serie de outros que vou escrever sobre Serverless com o foco em FaaS mais especificamente [AWS Lambda](https://aws.amazon.com/pt/lambda/) que é o mais tenho experiência, segue alguns tópicos que penso em abordar por aqui:
+Para finalizar, este artigo da inicio a uma serie de outros que vou escrever sobre Serverless com o foco em FaaS mais especificamente [AWS Lambda](https://aws.amazon.com/pt/lambda/) que é o mais tenho experiência, segue alguns tópicos que penso em abordar por aqui:
 
 * AWS Lambda
 * Framework Serverless
 
   Dentro deste contexto, quero fazer pocket posts (posts rápidos) demonstrando como configurar pelo arquivo de configuração que o framework fornece alguns recursos da AWS, segue alguns exemplos:
 
+  * Debugando sua função localmente
   * SNS, SQS, S3
   * API Gateway
   * VPC
