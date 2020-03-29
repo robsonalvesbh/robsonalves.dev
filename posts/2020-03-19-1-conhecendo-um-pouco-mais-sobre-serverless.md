@@ -1,7 +1,7 @@
 ---
 title: '#1 - Conhecendo um pouco mais sobre Serverless'
 description: >-
-  O nome Serverless é um tanto quando contraditório, e na maioria das vezes
+  O nome Serverless é um tanto quanto contraditório, e na maioria das vezes
   acaba gerando confusão, mas uma coisa você pode ter certeza ainda não
   conseguiram eliminar a necessidade de se ter um servidor. 
 date: '2020-03-18 10:09:01'
@@ -12,7 +12,7 @@ image: assets/img/0_i9jz_tck8frzyao8.png
 ---
 ![Meme do batman, Robin disse que existem servidores no Serverless e o Batman bate na cara dele falando que esse não é o ponto](assets/img/0_i9jz_tck8frzyao8.png "Meme batman")
 
-O nome Serverless é um tanto quando contraditório, e na maioria das vezes acaba gerando confusão, mas uma coisa você pode ter certeza ainda não conseguiram eliminar a necessidade de se ter um servidor. 
+O nome Serverless é um tanto quanto contraditório, e na maioria das vezes acaba gerando confusão, mas uma coisa você pode ter certeza ainda não conseguiram eliminar a necessidade de se ter um servidor. 
 
 Uma analogia que gosto bastante e que exemplifica bem este conceito é de que Servereless é como o Wifi, mesmo que você esteja se conectando a uma rede sem fio, ainda há muitos cabos envolvidos, você só não precisa se preocupar com eles.
 
