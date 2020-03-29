@@ -2,7 +2,10 @@
 date: 2017-07-30 15:06:08
 title: 'Dicas para melhorar a sua experiência com o terminal do macOS'
 description: "Hoje em dia estamos passando cada vez mais tempo trabalhando no terminal, seja para utilizar o Git, Gulp, Composer, entre outras 'zilhões' de ferramentas. Então nada melhor que utilizarmos alguns recursos para melhorar a nossa experiência e ganharmos agilidade para aumentar a nossa produtividade ao utilizá-lo."
-tags: [Terminal, Git]
+image: assets/img/branch na frente do nome terminal.png
+tags: 
+    - Terminal
+    - Git
 ---
 
 Hoje em dia estamos cada vez mais utilizando o terminal em nosso dia-a-dia, seja para utilizar o _Git_, _Docker_, _Composer_,
