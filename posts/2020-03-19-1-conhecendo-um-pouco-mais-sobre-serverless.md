@@ -1,6 +1,9 @@
 ---
 title: '#1 - Conhecendo um pouco mais sobre Serverless'
-description: 'O nome Serverless é um tanto quando contraditório,'
+description: >-
+  O nome Serverless é um tanto quando contraditório, e na maioria das vezes
+  acaba gerando confusão, mas uma coisa você pode ter certeza ainda não
+  conseguiram eliminar a necessidade de se ter um servidor. 
 date: '2020-03-18 10:09:01'
 tags:
   - Serverless
