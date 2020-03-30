@@ -12,11 +12,11 @@ image: assets/img/0_i9jz_tck8frzyao8.png
 ---
 ![Meme do batman, Robin disse que existem servidores no Serverless e o Batman bate na cara dele falando que esse não é o ponto](assets/img/0_i9jz_tck8frzyao8.png "Meme batman")
 
-O nome Serverless é um tanto quanto contraditório, e na maioria das vezes acaba gerando confusão, mas uma coisa você pode ter certeza ainda não conseguiram eliminar a necessidade de se ter um servidor. 
+O nome Serverless é um tanto quanto contraditório, e na maioria das vezes acaba gerando confusão, mas uma coisa você pode ter certeza, ainda não conseguiram eliminar a necessidade de se ter um servidor. 
 
 Uma analogia que gosto bastante e que exemplifica bem este conceito é de que Servereless é como o Wifi, mesmo que você esteja se conectando a uma rede sem fio, ainda há muitos cabos envolvidos, você só não precisa se preocupar com eles.
 
-Para começar, veremos brevemente como a infraestrutura dos servidores e nossa responsabilidade sobre os Servidores evoluiu até chegarmos a neste conceito e prós e cróntra dessa tecnologia.
+Para começar, veremos como a infraestrutura dos servidores e nossa responsabilidade sobre eles evoluiu até chegarmos a este conceito, veremos também os tipos de Serverless e as vantagens e desvantagens dessa tecnologia.
 
 ## Evolução do Serverless
 
@@ -24,13 +24,13 @@ Para começar, veremos brevemente como a infraestrutura dos servidores e nossa r
 
 ### Infraestrutura In-house
 
-Até pouco tempo atrás era comum empresas comprarem seus equipamentos e montarem seus próprios servidores para hospedar a suas aplicações, isso trazia a responsabilidade de gerenciar o hardware e os softwares do servidor, o custo de manter tudo isso para aplicações com um volume alto de tráfego, é bastante caro.
+Até pouco tempo atrás era comum empresas comprarem equipamentos e montarem seus próprios servidores para hospedar suas aplicações, isso fazia com que o desenvolvedor precisasse se preocupar com o gerenciamento do hardware e os softwares do servidor, para aplicações com um volume alto de tráfego o custo de manter tudo isso poderia ser bastante caro.
 
-Hoje em dia não é tão comum, mas ainda é possível encontrar empresas que utilizam este tipo de infraestrutura, se não me engano uma parte da globo.com ainda mantem a sua Infraestrutura In-house.
+Hoje em dia não é tão comum, mas ainda é possível encontrar empresas que utilizam este tipo de infraestrutura, se você conheçe alguma deixe ai nos comentários.
 
 ### Clouds - Computação nas nuvens
 
-Com a evolução das máquinas virtuais surgiram as famigeradas nuvens (Clouds) que retiraram da gente a necessidade de gerenciar o hardware do servidor, mas ainda sim precisamos nos preocupar com provisionamento do software de nossos servidores, a um preço bem mais baixo.
+Com a evolução das máquinas virtuais surgiram as famigeradas nuvens (Clouds) que retiraram dos desenvolvedores a necessidade de gerenciar o hardware do servidor, mas ainda sim precisamos nos preocupar com provisionamento do software de nossos servidores, a um preço bem mais baixo.
 
 Hoje a maiorias das aplicações web estão em clouds.
 
@@ -89,6 +89,7 @@ Provavelmente você já deve ter percebido algumas vantagens de se utilizar uma 
 
 * Bloqueio com provedor: Migrar sua aplicação para outro provedor poderá ser uma dor de cabeça.
 * Por ser limitações de FaaS, falarei no artigo sobre AWS Lambda sobre outras desvantagens como:
+
   * Limite do tempo de execução
   * Tempo de inicialização (latência)
 
@@ -110,4 +111,4 @@ Para finalizar, este artigo da inicio a uma serie de outros que vou escrever sob
   * SNS Filtering
 * Boas praticas de organização de código entre os lambdas de aplicações complexas
 
-Deixe um comentário deixando suas principais dúvidas sobre Serverless ou tópicos que você gostasse que eu abordasse por aqui!
+Deixe um comentário deixando suas principais dúvidas ou tópicos que você gostasse que eu abordasse por aqui!
