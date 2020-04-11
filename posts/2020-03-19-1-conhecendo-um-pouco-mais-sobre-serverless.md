@@ -1,9 +1,12 @@
 ---
 title: '#1 - Conhecendo um pouco mais sobre Serverless'
 description: >-
-  O nome Serverless é um tanto quanto contraditório, e na maioria das vezes
-  acaba gerando confusão, mas uma coisa você pode ter certeza ainda não
-  conseguiram eliminar a necessidade de se ter um servidor. 
+  O nome Serverless (sem servidor) é um tanto quanto contraditório e na maioria
+  das vezes acaba gerando confusão, mas uma coisa você pode ter certeza, ainda
+  não conseguiram eliminar a necessidade de se ter um servidor.   Uma analogia
+  que gosto bastante e que exemplifica bem este conceito é de que Serverless é
+  como o Wifi, mesmo que você esteja se conectando a uma rede sem fio, ainda há
+  muitos cabos envolvidos, você só não precisa se preocupar com eles.
 date: '2020-03-18 10:09:01'
 tags:
   - Serverless
