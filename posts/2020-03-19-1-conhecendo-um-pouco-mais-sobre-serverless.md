@@ -12,11 +12,11 @@ image: assets/img/0_i9jz_tck8frzyao8.png
 ---
 ![Meme do batman, Robin disse que existem servidores no Serverless e o Batman bate na cara dele falando que esse não é o ponto](assets/img/0_i9jz_tck8frzyao8.png "Meme batman")
 
-O nome Serverless é um tanto quanto contraditório, e na maioria das vezes acaba gerando confusão, mas uma coisa você pode ter certeza, ainda não conseguiram eliminar a necessidade de se ter um servidor. 
+O nome Serverless (sem servidor) é um tanto quanto contraditório e na maioria das vezes acaba gerando confusão, mas uma coisa você pode ter certeza, ainda não conseguiram eliminar a necessidade de se ter um servidor. 
 
-Uma analogia que gosto bastante e que exemplifica bem este conceito é de que Servereless é como o Wifi, mesmo que você esteja se conectando a uma rede sem fio, ainda há muitos cabos envolvidos, você só não precisa se preocupar com eles.
+Uma analogia que gosto bastante e que exemplifica bem este conceito é de que Serverless é como o Wifi, mesmo que você esteja se conectando a uma rede sem fio, ainda há muitos cabos envolvidos, você só não precisa se preocupar com eles.
 
-Para começar, veremos como a infraestrutura dos servidores e nossa responsabilidade sobre eles evoluiu até chegarmos a este conceito, veremos também os tipos de Serverless e as vantagens e desvantagens dessa tecnologia.
+Para começar, veremos como a infraestrutura dos servidores e nossa responsabilidade sobre eles evoluiu até chegarmos a este conceito, veremos também os tipos de Serverless e as vantagens e desvantagens em utilizar esta tecnologia.
 
 ## Evolução do Serverless
 
@@ -24,31 +24,31 @@ Para começar, veremos como a infraestrutura dos servidores e nossa responsabili
 
 ### Infraestrutura In-house
 
-Até pouco tempo atrás era comum empresas comprarem equipamentos e montarem seus próprios servidores para hospedar suas aplicações, isso fazia com que o desenvolvedor precisasse se preocupar com o gerenciamento do hardware e os softwares do servidor, para aplicações com um volume alto de tráfego o custo de manter tudo isso poderia ser bastante caro.
+Até pouco tempo atrás era comum empresas comprarem equipamentos e montarem seus próprios servidores para hospedar a suas aplicações, isso fazia com que o desenvolvedor precisasse se preocupar com o gerenciamento do hardware e os softwares do servidor, este tipo de infraestrutura costuma ser bastante cara pois além dos custos dos equipamentos, você terá de se gastos com a manutenção deles, energia e entre outros.
 
-Hoje em dia não é tão comum, mas ainda é possível encontrar empresas que utilizam este tipo de infraestrutura, se você conheçe alguma deixe ai nos comentários.
+Hoje em dia não é tão comum, mas ainda é possível encontrar empresas que utilizam este tipo de infraestrutura, se você conhece alguma deixe ai nos comentários.
 
 ### Clouds - Computação nas nuvens
 
-Com a evolução das máquinas virtuais surgiram as famigeradas nuvens (Clouds) que retiraram dos desenvolvedores a necessidade de gerenciar o hardware do servidor, mas ainda sim precisamos nos preocupar com provisionamento do software de nossos servidores, a um preço bem mais baixo.
+Com a evolução das máquinas virtuais surgiram as famigeradas nuvens (Clouds) que retiraram dos desenvolvedores a necessidade de gerenciar o hardware do servidor, mas ainda sim precisamos nos preocupar com provisionamento do software de nossos servidores, neste tipo de infraestrutura você paga pelo aluguel dos servidores e o preço vária de acordo com os recursos escolhidos.
 
-Hoje a maiorias das aplicações web estão em clouds.
+Hoje a maiorias das aplicações web estão em Clouds.
 
 ### Serverless
 
-O conceito Serverless surgiu com o propósito de abstrair completamente a infraestrutura do lado do servidor, não precisamos mais nos preocupar com software e muito menos com o hardware que está rodando nossa aplicação, com a infraestrutura transparente podemos concentrar nossos esforços na escrita do código e em gerar valor para o negócio.
+O conceito Serverless surgiu com o propósito de abstrair completamente do desenvolvedor a infraestrutura do lado do servidor, não precisamos mais nos preocupar com o software e muito menos com o hardware do servidor, com a infraestrutura transparente podemos concentrar nossos esforços na escrita do código e em gerar valor para o negócio.
 
-Diferentemente das arquiteturas anteriores no Serverless você só paga quando sua aplicação é executada e isso é um dos principais motivos por ele ter se popularizado.
+Diferentemente das arquiteturas anteriores, Serverless você só paga quando sua aplicação é executada e isso é um dos principais motivos por ele ter se popularizado.
 
 ## Tipos de Serverless
 
-Serverless é um modelo de Infraestrutura e portanto existem mais de um tipo e eles **BaaS** e **FaaS**.
+Serverless é um modelo de Infraestrutura, uma categoria e portanto existem mais de um tipo, hoje temos dois modelos distintos que são: **BaaS** e **FaaS**.
 
 ### BaaS - Backend as a Service
 
 Imagine que você vai iniciar o desenvolvimento de um aplicativo mobile e vai precisar implementar login com facebook, acessar banco de dados e armazenar arquivos, agora e se eu falasse que todas essas features já estão implementadas do lado do servidor e que estão disponíveis através de uma API simples de integrar?
 
-A ideia do BaaS é exatamente essa, fornecer uma grande variedade de recursos em forma de APIs para que você poder utilizar em suas aplicações, seja web ou mobile, sem precisar se preocupar com a implementação e nem com a infraestrutura.
+A ideia do BaaS é exatamente essa, fornecer uma grande variedade de recursos em forma de APIs para que você possa utilizar em suas aplicações, seja web ou mobile, sem precisar se preocupar com a implementação e nem com a infraestrutura.
 
 Um dos mais populares serviços de BaaS hoje é o [Firebase](https://firebase.google.com/) do google.
 
@@ -64,7 +64,7 @@ Existem algumas vantagens em utilizar esse tipo de abordagem, como: poder escala
 
 Afinal de contas o que essas funções? Resumidamente, são blocos de códigos que são executadas em [contâiners stateless](https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter) sob demanda. Existem diversos tipos de eventos que podem invocar sua função, como: Requisições HTTP, Schedulers e Triggers.
 
-Como é de se imaginar não precisamos nos preocupar com o gerenciamento dos servidores, o escalamento dinâmico, além de ser econômico, pois os provedores cobram somente pelos recursos efetivamente usados, e não pelo tempo ocioso.
+Como é de se imaginar não precisamos nos preocupar com o gerenciamento dos servidores, o escalamento é por demanda, além de ser econômico, pois os provedores cobram somente pelos recursos efetivamente usados, e não pelo tempo ocioso.
 
 Os provedores de FaaS mais populares são:
 
