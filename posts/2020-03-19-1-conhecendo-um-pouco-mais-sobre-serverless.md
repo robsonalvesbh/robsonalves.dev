@@ -23,7 +23,7 @@ Para começar, veremos como a infraestrutura dos servidores e nossa responsabili
 
 ### Infraestrutura In-house
 
-Até pouco tempo atrás era comum empresas comprarem equipamentos e montarem seus próprios servidores para hospedar a suas aplicações, isso fazia com que o desenvolvedor precisasse se preocupar com o gerenciamento do hardware e os softwares do servidor, este tipo de infraestrutura costuma ser bastante cara pois além dos custos dos equipamentos, você terá de se gastos com a manutenção deles, energia e entre outros.
+Até pouco tempo atrás era comum empresas comprarem equipamentos e montarem seus próprios servidores para hospedar a suas aplicações, isso fazia com que o desenvolvedor precisasse se preocupar com o gerenciamento do hardware e os softwares do servidor, este tipo de infraestrutura costuma ser bastante cara pois além dos custos dos equipamentos, você terá gastos com a manutenção, energia e entre outros.
 
 Hoje em dia não é tão comum, mas ainda é possível encontrar empresas que utilizam este tipo de infraestrutura, se você conhece alguma deixe ai nos comentários.
 
