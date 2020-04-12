@@ -3,14 +3,10 @@ title: '#1 - Conhecendo um pouco mais sobre Serverless'
 description: >-
   O nome Serverless (sem servidor) é um tanto quanto contraditório e na maioria
   das vezes acaba gerando confusão, mas uma coisa você pode ter certeza, ainda
-  não conseguiram eliminar a necessidade de se ter um servidor.   Uma analogia
-  que gosto bastante e que exemplifica bem este conceito é de que Serverless é
-  como o Wifi, mesmo que você esteja se conectando a uma rede sem fio, ainda há
-  muitos cabos envolvidos, você só não precisa se preocupar com eles.
+  não conseguiram eliminar a necessidade de se ter um servidor. 
 date: '2020-03-18 10:09:01'
 tags:
   - Serverless
-  - AWS Lambda
 image: assets/img/0_i9jz_tck8frzyao8.png
 ---
 ![Meme do batman, Robin disse que existem servidores no Serverless e o Batman bate na cara dele falando que esse não é o ponto](assets/img/0_i9jz_tck8frzyao8.png "Meme batman")
@@ -19,7 +15,7 @@ O nome Serverless (sem servidor) é um tanto quanto contraditório e na maioria 
 
 Uma analogia que gosto bastante e que exemplifica bem este conceito é de que Serverless é como o Wifi, mesmo que você esteja se conectando a uma rede sem fio, ainda há muitos cabos envolvidos, você só não precisa se preocupar com eles.
 
-Para começar, veremos como a infraestrutura dos servidores e nossa responsabilidade sobre eles evoluiu até chegarmos a este conceito, veremos também os tipos de Serverless e as vantagens e desvantagens em utilizar esta tecnologia.
+Para começar, veremos como a infraestrutura dos servidores e nossa responsabilidade sobre eles evoluiu até chegarmos a este conceito, os tipos de Serverless e as vantagens e desvantagens em utilizar esta tecnologia.
 
 ## Evolução do Serverless
 
@@ -57,17 +53,17 @@ Um dos mais populares serviços de BaaS hoje é o [Firebase](https://firebase.go
 
 ### FaaS - Function as a Service
 
-Com os sistemas cada vez mais modularizados os Microservices estão por toda parte e  com o surgimento do FaaS começou a se popularizar um novo conceito que são os Nanoservices.
+Com os sistemas cada vez mais modularizados, os Microservices estão por toda parte e com o surgimento do FaaS começou a se popularizar um novo conceito que são os Nanoservices.
+
+Afinal de contas o que é **FaaS**? Um FaaS não é muito diferente das funções que você já está acostumado a trabalhar, quando você define uma nova rota para a sua aplicação, além do nome (ex: /dashboard) você também precisa informar qual função será executada quando o usuário acessar está rota, no FaaS é a mesma coisa, você cria uma função e informa ela nas configurações do sua FaaS.
+
+Existem diversos tipos de eventos que podem invocar sua função, como: Requisições HTTP, Schedulers e Triggers, e quando invocada suas funções serão executadas em [contâiners stateless](https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter).
 
 Se imaginarmos uma API no contexto de Nanoservices iriamos ter cada um de seus endpoints separados em uma função, veja como ficaria na imagem abaixo: 
 
 ![Nanoservices - representação de vários endpoints e cada um apontando para uma função](assets/img/0_bn6fy8gksznumy1q.png "Nanoservices - representação de vários endpoints e cada um apontando para uma função")
 
 Existem algumas vantagens em utilizar esse tipo de abordagem, como: poder escalar os endpoints separadamente, não gerar concorrência entre os endpoints, se um endpoint "crashar" os outros continuam funcionando, entre outras.
-
-Afinal de contas o que essas funções? Resumidamente, são blocos de códigos que são executadas em [contâiners stateless](https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter) sob demanda. Existem diversos tipos de eventos que podem invocar sua função, como: Requisições HTTP, Schedulers e Triggers.
-
-Como é de se imaginar não precisamos nos preocupar com o gerenciamento dos servidores, o escalamento é por demanda, além de ser econômico, pois os provedores cobram somente pelos recursos efetivamente usados, e não pelo tempo ocioso.
 
 Os provedores de FaaS mais populares são:
 
@@ -78,12 +74,12 @@ Os provedores de FaaS mais populares são:
 
 ## Vantagens e Desvantagens
 
-Provavelmente você já deve ter percebido algumas vantagens de se utilizar uma arquitetura serverles, mas vamos ver os prós e contras de se utilizar
+Provavelmente você já deve ter percebido algumas vantagens de se utilizar uma arquitetura serverless, mas vamos ver os prós e contras de se utilizar.
 
 ### Vantagens
 
-* Sem responsabilidade pelo gerenciamento de servidores.
-* Escalabilidade gerenciada pelo provedor.
+* Não precisa se preocupar com gerenciamento de servidores.
+* Escalabilidade dinâmica gerenciada pelo provedor.
 * Com o foco voltado para o código você ganha agilidade e velocidade nas entregas. 
 * Sem cobrança pelo tempo ocioso, você paga apenas quando seu código está sendo executado.
 * Suporte a várias linguagens de programação.
@@ -91,27 +87,28 @@ Provavelmente você já deve ter percebido algumas vantagens de se utilizar uma 
 ### Desvantagens
 
 * Bloqueio com provedor: Migrar sua aplicação para outro provedor poderá ser uma dor de cabeça.
-* Por ser limitações de FaaS, falarei no artigo sobre AWS Lambda sobre outras desvantagens como:
+* Por ser limitações de FaaS, falarei um pouco mais no artigo sobre AWS Lambda sobre:
 
-  * Limite do tempo de execução
-  * Tempo de inicialização (latência)
+  * Limite do tempo de execução.
+  * Tempo de inicialização (latência).
 
 ## Série de artigos sobre Serverless
 
-Para finalizar, este artigo da inicio a uma serie de outros que vou escrever sobre Serverless com o foco em FaaS, mais especificamente falarei sobre [AWS Lambda](https://aws.amazon.com/pt/lambda/) pois é o que tenho mais experiência, segue alguns tópicos que penso em abordar por aqui:
+Para finalizar, este artigo da inicio a uma serie de outros que vou escrever sobre Serverless com o foco em FaaS, mais especificamente falarei sobre [AWS Lambda](https://aws.amazon.com/pt/lambda/) pois é o que tenho mais experiência, segue alguns tópicos que pretendo abordar por aqui:
 
 * AWS Lambda (Como funciona, preços e exemplos de aplicações)
 * Framework Serverless
 
-  Dentro deste contexto, quero fazer pocket posts (posts rápidos) demonstrando como configurar pelo arquivo de configuração que o framework fornece alguns recursos da AWS, segue alguns exemplos:
+  Dentro deste contexto, quero fazer Quick Tips (posts rápidos) demonstrando como configurar pelo arquivo de configuração do framework  alguns recursos da AWS, como:
 
-  * Debugando sua função localmente
   * SNS, SQS, S3
   * API Gateway
   * VPC
   * CloudWatch Events
   * CloudWatch Alerts
   * SNS Filtering
+
+* Debugando sua função localmente
 * Boas praticas de organização de código entre os lambdas de aplicações complexas
 
 Deixe um comentário deixando suas principais dúvidas ou tópicos que você gostasse que eu abordasse por aqui!
