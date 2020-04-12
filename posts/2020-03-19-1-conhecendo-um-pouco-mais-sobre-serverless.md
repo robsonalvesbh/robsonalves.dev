@@ -29,7 +29,7 @@ Hoje em dia não é tão comum, mas ainda é possível encontrar empresas que ut
 
 ### Clouds - Computação nas nuvens
 
-Com a evolução das máquinas virtuais surgiram as famigeradas nuvens (Clouds) que retiraram dos desenvolvedores a necessidade de gerenciar o hardware do servidor, mas ainda sim precisamos nos preocupar com provisionamento do software de nossos servidores, neste tipo de infraestrutura você paga pelo aluguel dos servidores e o preço vária de acordo com os recursos escolhidos.
+Com a evolução das máquinas virtuais surgiram as famigeradas nuvens (Clouds) que retiraram dos desenvolvedores a necessidade de gerenciar o hardware do servidor, mas ainda sim precisamos nos preocupar com provisionamento do software de nossos servidores, neste tipo de infraestrutura você paga pelo aluguel dos servidores e o preço varia de acordo com os recursos escolhidos.
 
 Hoje a maiorias das aplicações web estão em Clouds.
 
@@ -57,9 +57,9 @@ Com os sistemas cada vez mais modularizados, os Microservices estão por toda pa
 
 Afinal de contas o que é **FaaS**? Um FaaS não é muito diferente das funções que você já está acostumado a trabalhar, quando você define uma nova rota para a sua aplicação, além do nome (ex: /dashboard) você também precisa informar qual função será executada quando o usuário acessar está rota, no FaaS é a mesma coisa, você cria uma função e informa ela nas configurações do sua FaaS.
 
-Existem diversos tipos de eventos que podem invocar sua função, como: Requisições HTTP, Schedulers e Triggers, e quando invocada suas funções serão executadas em [contâiners stateless](https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter).
+Existem diversos tipos de eventos que podem invocar sua função, como: Requisições HTTP, Schedulers e Triggers, e quando invocada suas funções serão executadas em [containers stateless](https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter).
 
-Se imaginarmos uma API no contexto de Nanoservices iriamos ter cada um de seus endpoints separados em uma função, veja como ficaria na imagem abaixo: 
+Se imaginarmos uma API no contexto de Nanoservices iríamos ter cada um de seus endpoints separados em uma função, veja como ficaria na imagem abaixo: 
 
 ![Nanoservices - representação de vários endpoints e cada um apontando para uma função](assets/img/0_bn6fy8gksznumy1q.png "Nanoservices - representação de vários endpoints e cada um apontando para uma função")
 
@@ -94,7 +94,7 @@ Provavelmente você já deve ter percebido algumas vantagens de se utilizar uma 
 
 ## Série de artigos sobre Serverless
 
-Para finalizar, este artigo da inicio a uma serie de outros que vou escrever sobre Serverless com o foco em FaaS, mais especificamente falarei sobre [AWS Lambda](https://aws.amazon.com/pt/lambda/) pois é o que tenho mais experiência, segue alguns tópicos que pretendo abordar por aqui:
+Para finalizar, este artigo dá início a uma série de outros que vou escrever sobre Serverless com o foco em FaaS, mais especificamente falarei sobre [AWS Lambda](https://aws.amazon.com/pt/lambda/) pois é o que tenho mais experiência, segue alguns tópicos que pretendo abordar por aqui:
 
 * AWS Lambda (Como funciona, preços e exemplos de aplicações)
 * Framework Serverless
@@ -109,6 +109,6 @@ Para finalizar, este artigo da inicio a uma serie de outros que vou escrever sob
   * SNS Filtering
 
 * Debugando sua função localmente
-* Boas praticas de organização de código entre os lambdas de aplicações complexas
+* Boas práticas de organização de código entre os lambdas de aplicações complexas
 
 Deixe um comentário deixando suas principais dúvidas ou tópicos que você gostasse que eu abordasse por aqui!
