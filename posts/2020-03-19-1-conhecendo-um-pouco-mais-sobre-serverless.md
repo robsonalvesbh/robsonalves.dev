@@ -109,6 +109,6 @@ Para finalizar, este artigo dá início a uma série de outros que vou escrever 
   * SNS Filtering
 
 * Debugando sua função localmente
-* Boas práticas de organização de código entre os lambdas de aplicações complexas
+* Boas práticas de organização de código em aplicações lambdas com múltiplas funções  
 
 Deixe um comentário deixando suas principais dúvidas ou tópicos que você gostasse que eu abordasse por aqui!
