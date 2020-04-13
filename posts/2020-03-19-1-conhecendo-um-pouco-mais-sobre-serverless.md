@@ -97,7 +97,7 @@ Provavelmente você já deve ter percebido algumas vantagens de se utilizar uma 
 Para finalizar, este artigo dá início a uma série de outros que vou escrever sobre Serverless com o foco em FaaS, mais especificamente falarei sobre [AWS Lambda](https://aws.amazon.com/pt/lambda/) pois é o que tenho mais experiência, segue alguns tópicos que pretendo abordar por aqui:
 
 * AWS Lambda (Como funciona, preços e exemplos de aplicações)
-* Framework Serverless
+* [Framework Serverless](https://serverless.com/)
 
   Dentro deste contexto, quero fazer Quick Tips (posts rápidos) demonstrando como configurar pelo arquivo de configuração do framework  alguns recursos da AWS, como:
 
