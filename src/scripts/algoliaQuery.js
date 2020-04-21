@@ -12,7 +12,7 @@ const postQuery = `{
           title
           tags
           date_timestamp: date
-          date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+          date(formatString: "MMMM DD, YYYY", locale: "en_us")
           description
         }
         timeToRead
