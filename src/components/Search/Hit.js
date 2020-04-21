@@ -7,6 +7,7 @@ const Hit = ({ hit }) => (
     title={hit.title}
     date={hit.date}
     description={hit.description}
+    timeToRead={hit.timeToRead}
     tags={hit.tags}
   />
 )
