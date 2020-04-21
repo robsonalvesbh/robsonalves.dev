@@ -70,6 +70,8 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --black: #222;
   }
+
+  * { box-sizing: border-box; }
 `
 
 export default GlobalStyles

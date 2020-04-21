@@ -16,7 +16,7 @@ export const RecommendedLink = styled(AniLink)`
   padding: 3rem;
   text-decoration: none;
   transition: background 0.5s;
-  width: 50%;
+  width: ${props => props.previous && props.next ? "50%" : "100%" };
 
   ${media.lessThan('large')`
     padding: 2rem 1rem;
