@@ -9,22 +9,29 @@ import * as S from '../components/Post/styled'
 const AboutPage = () => (
   <Layout>
     <SEO
-      title="Sobre mim"
+      title="About Me"
       description="Saiba um pouco mais sobre o desenvolvedor por trás deste blog."
     />
-    <PageTitle>SOBRE MIM</PageTitle>
+    <PageTitle>ABOUT ME</PageTitle>
     <S.MainContent>
       <article>
         <p>
-            Meu nome é Robson Alves, sou graduado em ciência da computação, trabalho com desenvolvimento web há mais
-            de 6 anos, atualmente sou engenheiro de software na <a href="https://www.olx.com.br/">OLX</a> e
-            trabalho como freelance nas horas vagas, já tive a oportunidade de participar em projetos de grandes empresas como: 
-            Maxmilhas, SambaTech, Cielo, Totvs, Kroton, entre outras.
+            Hey Folks, my name is Robson Alves, I am currently living in São Paulo - Brazil, I have a degree in computer science and 
+            I work with web development for over 6 years. I am currently a software engineer at <a href="https://www.olx.com.br/" target="_blank" rel="noopener noreferrer">OLX Brazil</a> and 
+            work as a freelancer in my spare time, I have had the opportunity to participate in projects of large companies 
+            such as Maxmilhas, SambaTech, Cielo, Totvs, Kroton, among others.
         </p>
 
         <p>
-            Sou fascinado pela dinâmica que o desenvolvimento me proporciona, viciado em boas praticas, clean code, arquitetura de software,
-            amo trabalhar em aplicações altamente escaláveis e que tenham um propósito. ;-)
+            I like the dynamics that development gives me, I'm very active in software communities, 
+            I'm a <a href="https://www.valamis.com/hub/lifelong-learning" target="_blank" rel="noopener noreferrer">lifelong learner</a> and 
+            I'm addicted to topics like good practices, clean code, software architecture, serverless and 
+            other things around highly scalable applications. ;-)
+        </p>
+
+        <p>
+            I will use this blog to write about technologies that interest me and I also intend to write some 
+            articles in English and even in Spanish to practice these languages.
         </p>
 
         <h2>Hard skills</h2>
@@ -33,10 +40,11 @@ const AboutPage = () => (
             <li>NodeJS</li>
             <li>PHP</li>
             <li>Python</li>
-            <li>React - React Native</li>
+            <li>React</li>
             <li>AWS</li>
-            <li>MySQL - PostgreSQL - MongoDB</li>
-            <li>TDD - Continuous Integration</li>
+            <li>CI - CD</li>
+            <li>MySQL - PostgreSQL - MongoDB - DynamoDB</li>
+            <li>TDD</li>
             <li>Git - GitFlow</li>
             <li>Docker - Vagrant</li>
             <li>Scrum - Kamban</li>
@@ -46,23 +54,24 @@ const AboutPage = () => (
         <h2>Soft skills</h2>
 
         <ul>
-            <li>Flexível</li>
-            <li>Organizado</li>
-            <li>Aprendo Rápido</li>
-            <li>Gosto de resolver problemas</li>
-            <li>Adoro novos desafios</li>
-            <li>Autodidata</li>
-            <li>Pró-ativo</li>
+            <li> Flexible </li>
+            <li> Organized </li>
+            <li> I learn fast </li>
+            <li> I like to solve problems </li>
+            <li> I love new challenges </li>
+            <li> Self-taught </li>
+            <li> Proactive </li>
         </ul>
 
-        <h2>Idiomas</h2>
+        <h2>Languages</h2>
 
         <ul>
-            <li>Espanhol</li>
-            <li>Inglês</li>
+            <li>Portuguese - Native language</li>
+            <li>English</li>
+            <li>Spanish</li>
         </ul>
 
-        <h2>Contato</h2>
+        <h2>Contact</h2>
 
         <ul>
             <li><a href="https://www.linkedin.com/in/robsonalvesbh/">Linkedin</a></li>
@@ -71,7 +80,7 @@ const AboutPage = () => (
         </ul>
 
         <p>
-            Quer bater um papo comigo sobre qualquer outro assunto? Faça contato pelo meu e-mail <a href="mailto:robsonalves.dev@gmail.com">robsonalves.dev@gmail.com</a>.
+            Do you want to ask me anything? let me know <a href="mailto:robsonalves.dev@gmail.com">robsonalves.dev@gmail.com</a>.
         </p>
 
       </article>
