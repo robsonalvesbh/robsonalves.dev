@@ -37,15 +37,15 @@ Copie o endpoint e cadastre-o no serviço desejado, solicite o envio do webhook,
 
 ![Painel do requestbin exibindo os dados da requisição recebida](assets/img/screen-shot-2020-04-08-at-00.34.39.png "Painel do requestbin exibindo os dados da requisição recebida")
 
-A dashboard nos fornece todas as informações necessárias para analisarmos o Webhook, como:
+Pela dashboard é possível analisar com detalhes as requisições que chegaram via Webhook, é possível ver:
 
-* Rota
-* A HTTP Method
-* Headers
-* Body  
+* A Rota utilizada
+* O Método HTTP
+* Conteúdo do Header
+* Conteúdo do Body  
 
-Com os dados da requisição em mãos, basta copiar os parâmetros da requisição recebida e utilizar o postman para disparar a requisição para o seu endpoint local.
+Com os dados da requisição em mãos, basta copiar os parâmetros da requisição e utilizar algum HTTP Client como o [Postman](https://www.postman.com/) para disparar a requisição para o seu endpoint local.
 
-Dessa forma sempre que você precisar testar sua aplicação localmente recebendo um Webhook, você poderá utilizar o RequestBin como intermediador.
+Utilizando o RequestBin como intermediador você consegue trabalhar localmente utilizando os dados reais de uma requisição feita via Webhook e elimina a necessidade de testar sua integração em produção.
 
 **Quick Tips:** Como o próprio nome sugere, a ideia dessa série é que sejam posts rápidos com dicas de ferramentas e outras coisas úteis que eu encontre por aí. =)
