@@ -33,7 +33,7 @@ Para utilizar é bastante simples, acesse o [site](https://requestbin.com/) cliq
 
 ![Endpoint exibido no painel do requestbin](assets/img/screen-shot-2020-04-08-at-00.37.00.png "Endpoint exibido no painel do requestbin")
 
-Copie o endpoint e cadastre-o no serviço desejado, solicite o postback, assim que a requisição for enviada irá aparecer no painel do requestBin, como na imagem abaixo: 
+Copie o endpoint e cadastre-o no serviço desejado, solicite o envio do webhook, assim que a requisição for enviada irá aparecer no painel do requestBin, como na imagem abaixo: 
 
 ![Painel do requestbin exibindo os dados da requisição recebida](assets/img/screen-shot-2020-04-08-at-00.34.39.png "Painel do requestbin exibindo os dados da requisição recebida")
 
