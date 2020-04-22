@@ -35,7 +35,8 @@ const pluginConfig = [
           },
         },
         `gatsby-remark-lazy-load`,
-        `gatsby-remark-prismjs`
+        `gatsby-remark-prismjs`,
+        `gatsby-remark-external-links`
       ],
     },
   },
