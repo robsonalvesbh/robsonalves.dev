@@ -29,7 +29,7 @@ Publicar um endpoint em produção somente para conseguir receber o Webhook e va
 
 O RequestBin disponibiliza um endpoint para que você possa cadastrá-lo no serviço que irá lhe enviar os Webhooks e ainda lhe fornece uma dashboard para que você possa acompanhar em real time as requisições recebidas.
 
-Para utilizar é bastante simples, acesse o [site](https://requestbin.com/) clique em Create RequestBin e faça login com o Google ou Github, ao logar você será redirecionado para a dashboard e seu endpoint aparecerá em destaque, como na imagem abaixo:
+Para utilizar é bastante simples, acesse o [site](https://requestbin.com/) clique em `Create RequestBin` e faça login com o Google ou Github, ao logar você será redirecionado para a dashboard e seu endpoint aparecerá em destaque, como na imagem abaixo:
 
 ![Endpoint exibido no painel do requestbin](assets/img/screen-shot-2020-04-08-at-00.37.00.png "Endpoint exibido no painel do requestbin")
 
