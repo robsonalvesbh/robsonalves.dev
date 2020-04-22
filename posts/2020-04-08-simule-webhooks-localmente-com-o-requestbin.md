@@ -10,13 +10,12 @@ tags:
   - Tools
 image: assets/img/screen-shot-2020-04-08-at-00.34.39.png
 ---
-Quando você vai desenvolver uma integração com algum Gateway de pagamento é comum você precisar cadastrar um endpoint (URL) para que quando houver alguma mudança no status da transação o Gateway possa lhe enviar uma requisição notificando a alteração.
+Quando você vai desenvolver uma [integração com algum Gateway de pagamento](https://docs.pagar.me/docs/overview-postback-url) é comum você precisar cadastrar um endpoint (URL) para que quando houver alguma mudança no status da transação o Gateway possa lhe enviar uma requisição notificando a alteração.
 
 Essa abordagem é bastante interessante porque elimina a necessidade de você ter que ficar fazendo requisições na API do Gateway para verificar se houve alguma mudança no status da transação. Essa abordagem é popularmente conhecida como Postback ou Webhook.
 
-Citei no exemplo acima Gateway de pagamento, mas essa abordagem é amplamente utilizada e bem comum de se deparar com ela no dia a dia, veja alguns exemplos de integrações que utilizam Webhook:
+Citei no exemplo acima Gateway de pagamento, mas essa abordagem é amplamente utilizada e é bem fácil se deparar com ela no dia a dia, veja outros exemplos de integrações que utilizam Webhook:
 
-- [Pagar.me](https://docs.pagar.me/docs/overview-postback-url)
 - [Slack](https://api.slack.com/legacy/custom-integrations/outgoing-webhooks)
 - [Facebook](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/quickstart/webhooks-integration?locale=pt_BR)
 - [Github](https://developer.github.com/webhooks/)
@@ -24,7 +23,7 @@ Citei no exemplo acima Gateway de pagamento, mas essa abordagem é amplamente ut
 
 Um grande problema desta abordagem é que mesmo em ambiente de desenvolvimento será necessário cadastrar um endpoint público para que você possa receber o Webhook e testar a sua integração.
 
-Publicar um endpoint em produção para poder receber o conteúdo do Webhook e validar a sua integração, além de não ser uma boa prática, da um puta trabalho porque a cada correção que você fizer no seu endpoint você terá de repetir o processo de deploy e é aí que entra ferramentas como o RequestBin.
+Publicar um endpoint em produção somente para conseguir receber o Webhook e validar a sua integração, além de não ser uma boa prática, dá um puta trabalho porque a cada correção que você fizer no seu endpoint você terá de repetir o processo de deploy. E é aí que entra o RequestBin.
 
 ## RequestBin
 
