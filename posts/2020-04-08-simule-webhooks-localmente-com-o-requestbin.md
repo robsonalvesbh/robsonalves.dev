@@ -16,10 +16,10 @@ Essa abordagem é bastante interessante porque elimina a necessidade de você te
 
 Citei no exemplo acima Gateway de pagamento, mas essa abordagem é amplamente utilizada e é bem fácil se deparar com ela no dia a dia, veja outros exemplos de integrações que utilizam Webhook:
 
-- [Slack](https://api.slack.com/legacy/custom-integrations/outgoing-webhooks)
-- [Facebook](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/quickstart/webhooks-integration?locale=pt_BR)
-- [Github](https://developer.github.com/webhooks/)
-- [Hotmart](https://atendimento.hotmart.com.br/hc/pt-br/articles/360001491352-Como-configurar-sua-API-atrav%C3%A9s-do-Webhook-Postback-)
+* [Slack](https://api.slack.com/legacy/custom-integrations/outgoing-webhooks)
+* [Facebook](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/quickstart/webhooks-integration?locale=pt_BR)
+* [Github](https://developer.github.com/webhooks/)
+* [Hotmart](https://atendimento.hotmart.com.br/hc/pt-br/articles/360001491352-Como-configurar-sua-API-atrav%C3%A9s-do-Webhook-Postback-)
 
 Um grande problema desta abordagem é que mesmo em ambiente de desenvolvimento será necessário cadastrar um endpoint público para que você possa receber o Webhook e testar a sua integração.
 
@@ -31,7 +31,12 @@ O RequestBin disponibiliza um endpoint para que você possa cadastrá-lo no serv
 
 Para utilizar é bastante simples, acesse o [site](https://requestbin.com/) clique em Create RequestBin e faça login com o Google ou Github, ao logar você será redirecionado para a dashboard e seu endpoint aparecerá em destaque, como na imagem abaixo:
 
-Copie o endpoint e cadastre-o no serviço desejado, solicite o postback, assim que a requisição for enviada irá aparecer no painel do requestBin, como na imagem abaixo:
+![Endpoint exibido no painel do requestbin](assets/img/screen-shot-2020-04-08-at-00.37.00.png "Endpoint exibido no painel do requestbin")
+
+Copie o endpoint e cadastre-o no serviço desejado, solicite o postback, assim que a requisição for enviada irá aparecer no painel do requestBin, como na imagem abaixo: 
+
+![Painel do requestbin exibindo os dados da requisição recebida](assets/img/screen-shot-2020-04-08-at-00.34.39.png "Painel do requestbin exibindo os dados da requisição recebida")
+
 A dashboard nos fornece todas as informações necessárias para analisarmos o postback, como:
 
 * Rota
