@@ -1,5 +1,5 @@
 ---
-date: 2017-07-30 15:06:08
+date: '2017-07-30 15:06:08'
 title: 'Dicas para melhorar a sua experiência com o terminal do macOS'
 description: "Hoje em dia estamos passando cada vez mais tempo trabalhando no terminal, seja para utilizar o Git, Gulp, Composer, entre outras 'zilhões' de ferramentas. Então nada melhor que utilizarmos alguns recursos para melhorar a nossa experiência e ganharmos agilidade para aumentar a nossa produtividade ao utilizá-lo."
 image: assets/img/branch na frente do nome terminal.png

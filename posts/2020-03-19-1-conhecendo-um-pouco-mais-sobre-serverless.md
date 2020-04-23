@@ -4,7 +4,7 @@ description: >-
   O nome Serverless (sem servidor) é um tanto quanto contraditório e na maioria
   das vezes acaba gerando confusão, mas uma coisa você pode ter certeza, ainda
   não conseguiram eliminar a necessidade de se ter um servidor. 
-date: 2020-03-18 10:09:01
+date: '2020-03-18 10:09:01'
 tags:
   - Serverless
 image: assets/img/0_i9jz_tck8frzyao8.png

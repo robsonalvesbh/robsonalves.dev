@@ -1,5 +1,5 @@
 ---
-date: 2019-03-11 21:33:50
+date: '2019-03-11 21:33:50'
 title: 'Create reports quickly and increase your knowledge of your data with this incredible tool'
 description: 'Sometimes we need to create reports about our sales, customers or finances and we spend a lot of time, coding, plotting the data in a graph, and at the end of the day, we just created a little monster (system) that we will need to do maintenance and fix the bugs for a long time.'
 image: assets/img/dashboard-metabase.png

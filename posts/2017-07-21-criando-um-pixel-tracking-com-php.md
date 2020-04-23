@@ -1,7 +1,7 @@
 ---
 title: Criando um Pixel Tracking com PHP
 description: "Pixel Tracking é um técnica muito utilizada para rastrear emails e saber quando eles forem abertos."
-date: 2017-07-21 22:52:42
+date: '2017-07-21 22:52:42'
 image: assets/img/conversion-tracking-adwords-analytics.png
 tags:
   - PHP
