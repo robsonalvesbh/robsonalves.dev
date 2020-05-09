@@ -169,11 +169,49 @@ avoid hadouken code
 
 ## Avoid to set value as Hard Coding
 
-If you see the numbers 6,283 or 299792458 in an equation, can you quickly know what they mean? Probably not. 
+If you see the ID `956473` in a condition, can you quickly know what it means? Probably not.
 
 This is the problem when you set a value hard coding, you hide the real meaning of the values ​​and make the code difficult to understand for developers who are not inserted in the same context that the code.
 
-The objective of 
+Take a look at the following example:
+
+```js
+if (user.profile === 956473) {
+  // do something
+}
+```
+
+What the hell does `956473` mean? It is hard to say. 
+
+This problem is easy to solve just by setting this ID in a constant, see: 
+
+```js
+const DEVELOPER_PROFILE_ID = 956473
+```
+
+```js
+if (user.profile === DEVELOPER_PROFILE_ID) {
+  // do something
+}
+```
+
+Now, our code to explicit what it does, is easier to understand and you can reuse the constant `DEVELOPER_PROFILE_ID` in other parts of the code.
 
 
 
+
+## Encapsulate conditions
+
+Getting the previous example, we can encapsulate the condition in a function:
+
+```js
+const DEVELOPER_PROFILE_ID = 956473
+
+const isDeveloper = (user) => user.profile === DEVELOPER_PROFILE_ID
+
+...
+
+if (isDeveloper(user)) {
+  // do something
+}
+``
