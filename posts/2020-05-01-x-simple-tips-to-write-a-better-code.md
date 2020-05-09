@@ -169,8 +169,11 @@ avoid hadouken code
 
 ## Avoid to set value as Hard Coding
 
-If you see the numbers 6,283 or 299792458 in an equation, can you quickly know what they mean? Probably not. This is the problem when you set a value hard coding, you 
+If you see the numbers 6,283 or 299792458 in an equation, can you quickly know what they mean? Probably not. 
+
+This is the problem when you set a value hard coding, you hide the real meaning of the values ​​and make the code difficult to understand for developers who are not inserted in the same context that the code.
+
+The objective of 
 
 
-você esconde o real significado dos valores e dificulta o entendimento do código para desenvolvedores que não estao acasdasd--inserinse
 
