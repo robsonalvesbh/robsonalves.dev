@@ -187,9 +187,7 @@ This problem is easy to solve just by extracting this ID in a constant with a me
 
 ```js
 const DEVELOPER_PROFILE_ID = 956473
-```
 
-```js
 if (user.profile === DEVELOPER_PROFILE_ID) {
   // do something
 }
@@ -239,8 +237,6 @@ Getting the previous example, we can encapsulate the condition in a function:
 const DEVELOPER_PROFILE_ID = 956473
 
 const isDeveloper = (user) => user.profile === DEVELOPER_PROFILE_ID
-
-...
 
 if (isDeveloper(user)) {
   // do something
