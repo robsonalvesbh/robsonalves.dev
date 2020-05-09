@@ -183,7 +183,7 @@ if (user.profile === 956473) {
 
 What the hell does `956473` mean? It is hard to say. 
 
-This problem is easy to solve just by setting this ID in a constant, see: 
+This problem is easy to solve just by extracting this ID in a constant with a meaningful name, see: 
 
 ```js
 const DEVELOPER_PROFILE_ID = 956473
@@ -197,8 +197,39 @@ if (user.profile === DEVELOPER_PROFILE_ID) {
 
 Now, our code to explicit what it does, is easier to understand and you can reuse the constant `DEVELOPER_PROFILE_ID` in other parts of the code.
 
+### Extract hard-coding secrets values
 
+Other context that is good to avoid hard coding is in secrets values.
 
+```js
+const connection = mysql.createConnection({
+  host: "yourhost",
+  user: "yourusername",
+  password: "yourpassword"
+})
+```
+
+What happens if you need to change the database secrets that are hard-coding setting in your function? You will need to change the code updating the secret and make a new deployment.
+
+It's bureaucratic, it's not fast and your code is rigid. 
+
+A good practice is to make your code more flexible is extracting the secrets to an environment variables, like this:
+
+```js
+const MYSQL_HOST = process.env.MYSQL_HOST || 'default_value'
+const MYSQL_USER = process.env.MYSQL_USER || 'default_value'
+const MYSQL_PASSWORD = process.env.MYSQL_PASSWORD || 'default_value'
+
+const connection = mysql.createConnection({
+  host: MYSQL_HOST,
+  user: MYSQL_USER,
+  password: MYSQL_PASSWORD,
+})
+```
+
+To define the value to environment variables, you can use a lib like [dotenv](https://www.npmjs.com/package/dotenv) (you can easily find this lib for your preferred language).
+
+In production I really recomend tuopu 
 
 ## Encapsulate conditions
 
