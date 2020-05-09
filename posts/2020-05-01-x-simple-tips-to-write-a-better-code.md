@@ -14,6 +14,10 @@ image: assets/img/unnamed.png
 ---
 These tips are a mix of some tips from the [book Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882), [Object Calisthenics](https://williamdurand.fr/2013/06/03/object-calisthenics/), and my experience of more than 6 years as a developer. I tried not to use advanced concepts so that developers of any level can use them.
 
+
+
+
+
 My advice to you is to try it, try it for a few weeks and you will see how much the quality of your code will improve.
 
 ## Follow a style guide
@@ -75,7 +79,11 @@ References:
 
 ## Early returns
 
-If you have a chance to exit the method do it as soon as possible, so you eliminate invalid cases and then focus on the "real" purpose of the function.
+Always you have a chance to get out of a function do it as soon as possible, the main goal is to eliminate invalid cases to focus on the "real" purpose of the function.
+
+ your code will be more clear and less complex.
+
+it's very simple to implement Early return
 
 In some cases, using early returns optional. Take a look at the following example:
 
@@ -119,9 +127,9 @@ const someFunction = () => {
 
   // do something
 }
-``
+```
 
-This code is hard to read, probably is with too much resposability
+This code is hard to read and probably has too much responsibility.
 
 ```js
 const someFunction = () => {
@@ -139,7 +147,7 @@ const someFunction = () => {
 
   // do something
 }
-``
+```
 
 ## Avoid using ELSE
 
@@ -159,6 +167,10 @@ https://www.perforce.com/blog/qac/what-cyclomatic-complexity
 
 avoid hadouken code 
 
-## Avoid Hardcoding
+## Avoid to set value as Hard Coding
 
-If you see the numbers 6.283 or 299792458 in an equation, do they instantly jump out at you as meaningful numbers? Probably not
+If you see the numbers 6,283 or 299792458 in an equation, can you quickly know what they mean? Probably not. This is the problem when you set a value hard coding, you 
+
+
+você esconde o real significado dos valores e dificulta o entendimento do código para desenvolvedores que não estao acasdasd--inserinse
+
