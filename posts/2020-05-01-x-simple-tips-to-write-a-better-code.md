@@ -195,7 +195,7 @@ if (user.profile === DEVELOPER_PROFILE_ID) {
 
 Now, our code to explicit what it does, is easier to understand and you can reuse the constant `DEVELOPER_PROFILE_ID` in other parts of the code.
 
-### Extract hard-coding secrets values
+## Extract hard-coding secrets values
 
 Other context that is good to avoid hard coding is in secrets values.
 
@@ -209,7 +209,7 @@ const connection = mysql.createConnection({
 
 What happens if you need to change the database secrets that are hard-coding setting in your function? You will need to change the code updating the secret and make a new deployment.
 
-It's bureaucratic, it's not fast and your code is rigid. 
+It's bureaucratic, it's not fast and your code is not flexible. 
 
 A good practice is to make your code more flexible is extracting the secrets to an environment variables, like this:
 
@@ -225,9 +225,11 @@ const connection = mysql.createConnection({
 })
 ```
 
-To define the value to environment variables, you can use a lib like [dotenv](https://www.npmjs.com/package/dotenv) (you can easily find this lib for your preferred language).
+To define the value of environment variables, you can use a lib like [dotenv](https://www.npmjs.com/package/dotenv) it's pretty easy to find out this lib for your preferred language.
 
-In production I really recomend tuopu 
+I really recommend that you take a look at a tool like [Consul](https://www.consul.io/docs/commands/index.html#environment-variables) to manage your environment variables. With this tool, you can change the secret value in hot production without needing a deployment.
+
+When you work with multi stages 
 
 ## Encapsulate conditions
 
