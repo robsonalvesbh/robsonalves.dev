@@ -250,7 +250,7 @@ Follow below an example of a unit test of isDeveloper function:
 ```js
 test('should return true when the user has a developer profile', () => {
   const user = {
-    profile: 'develper'
+    profile: 'developer'
   }
 
   expect(isDeveloper(user)).toBeTruthy()
