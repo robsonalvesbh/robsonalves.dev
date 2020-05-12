@@ -248,7 +248,7 @@ if (isDeveloper(user)) {
 Follow below an example of a unit test of isDeveloper function:
 
 ```js
-test('should return true when has a developer profile', () => {
+test('should return true when the user has a developer profile', () => {
   const user = {
     profile: 'develper'
   }
@@ -256,7 +256,7 @@ test('should return true when has a developer profile', () => {
   expect(isDeveloper(user)).toBeTruthy()
 })
 
-test('should return false when has not a developer profile', () => {
+test('should return false when the user has not a developer profile', () => {
   const user = {
     profile: 'designer'
   }
