@@ -46,9 +46,7 @@ You can use some plugin in your preferred editor or IDE to formatting your code 
 
 We name things all the time, we name our variables, functions, class, arguments, and files, because of it we need to do this well.
 
-https://twitter.com/unclebobmartin
-
-This topic is so important that Uncle Bob wrote an entire chapter about it in the clean code book.
+This topic is so important that [Uncle Bob](https://twitter.com/unclebobmartin) wrote an entire chapter about it in the clean code book.
 
 To write meaningful names you can follow some rules:
 
