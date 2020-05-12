@@ -231,6 +231,8 @@ When you work with multi stages
 
 ## Encapsulate conditions
 
+Encapsulating conditions is a way to spell out your intention and what you want to validate, and code with encapsulated conditionals is easier to test.
+
 Getting the previous example, we can encapsulate the condition in a function:
 
 ```js
@@ -241,4 +243,24 @@ const isDeveloper = (user) => user.profile === DEVELOPER_PROFILE_ID
 if (isDeveloper(user)) {
   // do something
 }
-``
+```
+
+Follow below an example of a unit test of isDeveloper function:
+
+```js
+test('should return true when has a developer profile', () => {
+  const user = {
+    profile: 'develper'
+  }
+
+  expect(isDeveloper(user)).toBeTruthy()
+})
+
+test('should return false when has not a developer profile', () => {
+  const user = {
+    profile: 'designer'
+  }
+
+  expect(isDeveloper(user)).toBeFalsy()
+})
+```
