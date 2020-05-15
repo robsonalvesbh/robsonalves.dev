@@ -93,9 +93,9 @@ const sendEmail = (email, message) => {
 }
 ```
 
-This code is hard to read and probably has too much responsibility.
+Applying the *early return* and reversing the conditions:
 
-```php
+```js
 const sendEmail = (email, message) => {
   if (! isEmailValid(email)) {
     throw new Error('Email is not valid.')
