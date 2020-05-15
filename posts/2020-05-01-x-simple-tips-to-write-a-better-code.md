@@ -12,11 +12,7 @@ tags:
   - English
 image: assets/img/unnamed.png
 ---
-These tips are a mix of some tips from the [book Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882), [Object Calisthenics](https://williamdurand.fr/2013/06/03/object-calisthenics/), and my experience of more than 6 years as a developer. I tried not to use advanced concepts so that developers of any level can use them.
-
-
-
-
+These tips are a mix of some tips from the , [Object Calisthenics](https://williamdurand.fr/2013/06/03/object-calisthenics/), and my experience of more than 6 years as a developer. I tried not to use advanced concepts so that developers of any level can use them.
 
 My advice to you is to try it, try it for a few weeks and you will see how much the quality of your code will improve.
 
@@ -46,7 +42,7 @@ You can use some plugin in your preferred editor or IDE to formatting your code 
 
 We name things all the time, we name our variables, functions, class, arguments, and files, because of it we need to do this well.
 
-This topic is so important that [Uncle Bob](https://twitter.com/unclebobmartin) wrote an entire chapter about it in the clean code book.
+This topic is so important that [Uncle Bob](https://twitter.com/unclebobmartin) wrote an entire chapter about it in the [Clean Code book](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
 
 To write meaningful names you can follow some rules:
 
@@ -65,7 +61,7 @@ The name should reveal its intention.
 
 Don't worry if you spend to much time thinking about name of just variable, it's completely normal, but I guarantee it will be worth it.
 
-Remember: Name of things is like a joke if a name requires a comment, it is because the name is not good enough.
+Remember: The name of things is like a joke if the name requires a comment for explanation, it is because the name is not good enough.
 
 References:
 
@@ -79,9 +75,39 @@ References:
 
 Always you have a chance to get out of a function do it as soon as possible, the main goal is to eliminate invalid cases to focus on the "real" purpose of the function.
 
- your code will be more clear and less complex.
+it's very simple to implement Early return, the only thing you have to do is to reverse conditions.
 
-it's very simple to implement Early return
+Look the example below with many nested if/else statements:
+
+```js
+const sendEmail = (email, message) => {
+  if (isValidEmail(email)) {
+    if (message !== '') {
+        return mailer.send(email, message)
+    } else {
+        throw new Error('Cannot send an empty message.')
+    }
+  } else {
+    throw new Error('Email is not valid.')
+  }
+}
+```
+
+This code is hard to read and probably has too much responsibility.
+
+```php
+const sendEmail = (email, message) => {
+  if (! isEmailValid(email)) {
+    throw new Error('Email is not valid.')
+  }
+
+  if ($message === '') {
+    throw new Error('Cannot send an empty message.')
+  }
+
+  return mailer.send(email, message)
+}
+```
 
 In some cases, using early returns optional. Take a look at the following example:
 
@@ -97,7 +123,7 @@ const setName = (name) => {
 
 or you can just do it like this
 
-```js
+```php
 const setName = (name) => {
   if (name) {
     this.name = name
@@ -105,47 +131,7 @@ const setName = (name) => {
 }
 ```
 
-is up to you, choose what you prefer.
-
-The problem is when the code starts to have too many aligned conditions, like this following example:
-
-```js 
-const someFunction = () => {
-  if (firstCondiction) {
-    if (secondCondiction) {
-      // do something
-    } else {
-      if (thirdCondiction) {
-        // do something
-      }
-
-       // do something
-    }
-  }
-
-  // do something
-}
-```
-
-This code is hard to read and probably has too much responsibility.
-
-```js
-const someFunction = () => {
-  if (!firstCondiction) {
-    // do something
-  }
-
-  if (!secondCondiction) {
-    // do something
-  }
-
-  if (!thirdCondiction) {
-    // do something
-  }
-
-  // do something
-}
-```
+I particularly prefer the first approach, because you can throw an exception, but, it's up to you, choose what you prefer.
 
 ## Avoid using ELSE
 
@@ -169,9 +155,9 @@ avoid hadouken code
 
 If you see the ID `956473` in a condition, can you quickly know what it means? Probably not.
 
-This is the problem when you set a value hard coding, you hide the real meaning of the values ​​and make the code difficult to understand for developers who are not inserted in the same context that the code.
+This is the problem when you set a value hard coding, you hide the real meaning of the values ​​and make the code hard to understand for developers who are not inserted in the same context that your code.
 
-Take a look at the following example:
+Take a look at the example below:
 
 ```js
 if (user.profile === 956473) {
@@ -195,7 +181,7 @@ Now, our code to explicit what it does, is easier to understand and you can reus
 
 ## Extract hard-coding secrets values
 
-Other context that is good to avoid hard coding is in secrets values.
+Other context that you must avoid hard coding is in secrets values.
 
 ```js
 const connection = mysql.createConnection({
@@ -205,16 +191,16 @@ const connection = mysql.createConnection({
 })
 ```
 
-What happens if you need to change the database secrets that are hard-coding setting in your function? You will need to change the code updating the secret and make a new deployment.
+In a collaborative environment (e.g., work, or open source) this is not a good practice at all, you are exposed and anyone can get your database access direct from your repository.
 
-It's bureaucratic, it's not fast and your code is not flexible. 
+When you work with multiple repositories that can be a problem also, you probably will have a secret for each environment (development, homologation and production).
 
-A good practice is to make your code more flexible is extracting the secrets to an environment variables, like this:
+A good practice is to make your code more flexible and extracting the secrets to an environment variables, take a look at the example below:
 
 ```js
-const MYSQL_HOST = process.env.MYSQL_HOST || 'default_value'
-const MYSQL_USER = process.env.MYSQL_USER || 'default_value'
-const MYSQL_PASSWORD = process.env.MYSQL_PASSWORD || 'default_value'
+const MYSQL_HOST = process.env.MYSQL_HOST
+const MYSQL_USER = process.env.MYSQL_USER
+const MYSQL_PASSWORD = process.env.MYSQL_PASSWORD
 
 const connection = mysql.createConnection({
   host: MYSQL_HOST,
@@ -223,11 +209,9 @@ const connection = mysql.createConnection({
 })
 ```
 
-To define the value of environment variables, you can use a lib like [dotenv](https://www.npmjs.com/package/dotenv) it's pretty easy to find out this lib for your preferred language.
+To define the value of environment variables, you can use a lib as [dotenv](https://www.npmjs.com/package/dotenv), it's very easy to find that lib for your preferred language.
 
-I really recommend that you take a look at a tool like [Consul](https://www.consul.io/docs/commands/index.html#environment-variables) to manage your environment variables. With this tool, you can change the secret value in hot production without needing a deployment.
-
-When you work with multi stages 
+I recommend that you take a look at a tool like [Consul](https://www.consul.io/docs/commands/index.html#environment-variables) to manage your environment variables. With this tool, you can change the secret value in hot production without needing a new deployment.
 
 ## Encapsulate conditions
 
@@ -264,3 +248,7 @@ test('should return false when the user has not a developer profile', () => {
   expect(isDeveloper(user)).toBeFalsy()
 })
 ```
+
+## Conclusion
+
+All of these tips will help you to write code more readable and easy to understand, your code will be more clear and less complex.
