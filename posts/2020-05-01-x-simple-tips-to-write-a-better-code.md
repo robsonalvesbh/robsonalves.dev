@@ -97,7 +97,7 @@ Applying the *early return* and reversing the conditions:
 
 ```js
 const sendEmail = (email, message) => {
-  if (! isEmailValid(email)) {
+  if (! isValidEmail(email)) {
     throw new Error('Email is not valid.')
   }
 
@@ -123,7 +123,7 @@ const setName = (name) => {
 
 or you can just do it like this
 
-```php
+```js
 const setName = (name) => {
   if (name) {
     this.name = name
@@ -131,7 +131,7 @@ const setName = (name) => {
 }
 ```
 
-I particularly prefer the first approach, because you can throw an exception, but, it's up to you, choose what you prefer.
+I particularly prefer the first approach because I can do a validation and throw an exception if necessary, but, it's up to you, choose what you prefer.
 
 ## Avoid using ELSE
 
