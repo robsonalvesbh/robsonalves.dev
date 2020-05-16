@@ -147,6 +147,9 @@ Example:
 
 https://www.perforce.com/blog/qac/what-cyclomatic-complexity
 
+
+How do I eliminate the else? Applying the early return.
+
 ## Only one level of indentation per method
 
 avoid hadouken code 
