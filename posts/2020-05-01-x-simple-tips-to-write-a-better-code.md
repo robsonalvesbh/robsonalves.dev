@@ -9,9 +9,9 @@ description: >-
 date: '2020-04-22 10:09:22'
 tags:
   - English
-image: assets/img/bad-code-board.png
+image: assets/img/return_early_functions_placeholders.png
 ---
-![readable code](assets/img/readable-code.png)
+![readable code](assets/img/return_early_functions_placeholders.png "readable code")
 
 Throughout my 6+ years as a software engineer I learned some tips that helped me to improve the quality of my code and make it more readable, testable, maintainable, and easy to understand. I decided to compile all these tips in a way to be agnostic of design patterns or programming paradigm and that could be applied in any programming language.
 
