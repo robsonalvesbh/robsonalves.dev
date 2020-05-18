@@ -1,7 +1,11 @@
 ---
 title: X simple tips to write a better code
 description: >-
-  Throughout my 6+ years as a software engineer I learned some tips that helped me to improve the quality of my code and make it more readable, testable, maintainable, and easy to understand. I decided to compile all these tips in a way to be agnostic of design patterns or programming paradigm and that could be applied in any programming language.
+  Throughout my 6+ years as a software engineer I learned some tips that helped
+  me to improve the quality of my code and make it more readable, testable,
+  maintainable, and easy to understand. I decided to compile all these tips in a
+  way to be agnostic of design patterns or programming paradigm and that could
+  be applied in any programming language.
 date: '2020-04-22 10:09:22'
 tags:
   - English
@@ -15,14 +19,14 @@ My advice to you is to try it, try it for a few weeks and you will see how much 
 
 ## Tips
 
-- [Write Meaningful Names](#write-meaningful-names)
-- [Early returns](#early-returns)
-- [Avoid using ELSE](#avoid-using-else)
-- [Only one level of indentation per method](#only-one-level-of-indentation-per-method)
-- [Avoid setting value Hard Coding](#avoid-to-set-value-hard-coding)
-- [Extract hard-coding secrets values](#extract-hard-coding-secrets-values)
-- [Encapsulate conditions](#encapsulate-conditions)
-- [Follow a style guide](#follow-a-style-guide)
+* [Write Meaningful Names](#write-meaningful-names)
+* [Early returns](#early-returns)
+* [Avoid using ELSE](#avoid-using-else)
+* [Only one level of indentation per method](#only-one-level-of-indentation-per-method)
+* [Avoid setting value Hard Coding](#avoid-to-set-value-hard-coding)
+* [Extract hard-coding secrets values](#extract-hard-coding-secrets-values)
+* [Encapsulate conditions](#encapsulate-conditions)
+* [Follow a style guide](#follow-a-style-guide)
 
 ## Write Meaningful Names
 
@@ -32,16 +36,16 @@ This topic is so important that [Uncle Bob](https://twitter.com/unclebobmartin) 
 
 To write meaningful names you can follow some rules:
 
-- Use pronounceable names
-- Use searchable names
-- Do not use abbreviations
-- Function names should be verbs
+* Use pronounceable names
+* Use searchable names
+* Do not use abbreviations
+* Function names should be verbs
 
 The chosen name should answer these questions:
 
-- Why does it exist?
-- What is it does?
-- How is it used?
+* Why does it exist?
+* What is it does?
+* How is it used?
 
 The name should reveal its intention.
 
@@ -139,9 +143,9 @@ When you use IF/ELSE statement you are creating multiples ways that the executio
 
 This approach will help you to decrease the cyclomatic complexity of your code, turn it more readable.
 
-- Avoid code duplication
-- Code more readable
-- Decrease bugs
+* Avoid code duplication
+* Code more readable
+* Decrease bugs
 
 Example:
 
@@ -151,7 +155,61 @@ How do I eliminate the else? Applying the early return.
 
 ## Only one level of indentation per method
 
-![hadouken code](hadouken_code.png)
+![hadouken code](assets/img/0_wjwy84monqqzzhkj.png)
+
+This tip will help you to keep your functions small, more readable, and easy to compile the code in your head.
+
+Let’s apply the rule to the code:
+
+```java
+class Board {
+    public String board() {
+        StringBuilder buf = new StringBuilder();
+
+        // first level
+        for (int i = 0; i < 10; i++) {
+            // second level
+            for (int j = 0; j < 10; j++) {
+                // third level
+                buf.append(data[i][j]);
+            }
+            buf.append("\n");
+        }
+
+        return buf.toString();
+    }
+}
+```
+
+Using the Extract Method pattern, we will extract all all the deepest levels.
+
+```java
+class Board {
+    public String board() {
+        StringBuilder buf = new StringBuilder();
+
+        collectRows(buf);
+
+        return buf.toString();
+    }
+
+    private void collectRows(StringBuilder buf) {
+        for (int i = 0; i < 10; i++) {
+            collectRow(buf, i);
+        }
+    }
+
+    private void collectRow(StringBuilder buf, int row) {
+        for (int i = 0; i < 10; i++) {
+            buf.append(data[row][i]);
+        }
+
+        buf.append("\n");
+    }
+}
+```
+
+You won’t reduce the number of lines of code, but you will increase readability in a significant way.
 
 ## Avoid setting value as Hard Coding
 
@@ -250,6 +308,7 @@ test('should return false when the user has not a developer profile', () => {
   expect(isDeveloper(user)).toBeFalsy()
 })
 ```
+
 ## Follow a style guide
 
 A style guide helps to standardize coding conventions for everyone on the team and when the project has a consistent style, it brings several benefits such as increased productivity of the team and makes it easier to maintain.
@@ -258,30 +317,27 @@ No matter what language you are coding, there is probably a style guide for it, 
 
 PHP
 
-- [PSR-1](https://www.php-fig.org/psr/psr-1/)
-- [PSR-12](https://www.php-fig.org/psr/psr-12/)
+* [PSR-1](https://www.php-fig.org/psr/psr-1/)
+* [PSR-12](https://www.php-fig.org/psr/psr-12/)
 
 NodeJS
 
-- [StandardJS](https://standardjs.com/)
-- [Airbnb](https://github.com/airbnb/javascript)
+* [StandardJS](https://standardjs.com/)
+* [Airbnb](https://github.com/airbnb/javascript)
 
 Python
 
-- [PEP-8](https://www.python.org/dev/peps/pep-0008/)
+* [PEP-8](https://www.python.org/dev/peps/pep-0008/)
 
 You can use some plugin in your preferred editor or IDE to formatting your code automatically when coding and you can use a Lint in your deployment pipeline to validate your code before merging into the master branch.
 
-
 ## Conclusion
 
-All of these tips will help you to write code more readable, testable and will improve the maintainability of your project.
-spend much more time reading code than writing.
+All of these tips will help you to write code more readable, testable and will improve the maintainability of your project. spend much more time reading code than writing.
 
+## References
 
-## References 
-
-- https://medium.com/mindorks/meaningful-names-a-dimension-of-writing-clean-code-fdae1ae4f0b1
-- https://szymonkrajewski.pl/why-should-you-return-early/
-- https://williamdurand.fr/2013/06/03/object-calisthenics/#1-only-one-level-of-indentation-per-method
-- https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
+* https://medium.com/mindorks/meaningful-names-a-dimension-of-writing-clean-code-fdae1ae4f0b1
+* https://szymonkrajewski.pl/why-should-you-return-early/
+* https://williamdurand.fr/2013/06/03/object-calisthenics/#1-only-one-level-of-indentation-per-method
+* https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
