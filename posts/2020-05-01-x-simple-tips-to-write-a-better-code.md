@@ -155,9 +155,9 @@ How do I eliminate the else? Applying the early return.
 
 ## Only one level of indentation per method
 
-![hadouken code](assets/img/0_wjwy84monqqzzhkj.png)
-
 This tip will help you to keep your functions small, more readable, and easy to compile the code in your head.
+
+![hadouken code](assets/img/0_wjwy84monqqzzhkj.png)
 
 Let’s apply the rule to the code:
 
@@ -333,7 +333,10 @@ You can use some plugin in your preferred editor or IDE to formatting your code 
 
 ## Conclusion
 
-All of these tips will help you to write code more readable, testable and will improve the maintainability of your project. spend much more time reading code than writing.
+As you can see, the major of these tips are really connected, so when you're applying one tip unconsciously you'll apply other one, all of these tips will help you to write a better code in a natural way,  
+
+
+more readable, testable and will improve the maintainability of your project. spend much more time reading code than writing.
 
 ## References
 
