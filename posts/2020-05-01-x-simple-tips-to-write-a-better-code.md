@@ -13,9 +13,13 @@ image: assets/img/return_early_functions_placeholders.png
 ---
 ![readable code](assets/img/return_early_functions_placeholders.png "readable code")
 
-Throughout my 6+ years as a software engineer I learned some tips that helped me to improve the quality of my code and make it more readable, testable, maintainable, and easy to understand. I decided to compile all these tips in a way to be agnostic of design patterns or programming paradigm and that could be applied in any programming language.
+There are several ways to troubleshoot a problem. Why do we sometimes choose the path that is so difficult to understand that we ourselves don't understand if we see the code we wrote six months later?
 
-My advice to you is to try it, try it for a few weeks and you will see how much the quality of your code will improve.
+There are some tips we can apply to naturally improve the quality of the code we’re working on, and make it more readable, testable, maintainable, and easy to understand.
+
+I decided to compile all tips I've learned throughout my 6+ years as a software engineer and I try to write in a way to be agnostic of design patterns or programming paradigm and that could be applied in any programming language.
+
+My advice to you is to try it, try it for at least a few weeks.
 
 ## Tips
 
@@ -30,7 +34,7 @@ My advice to you is to try it, try it for a few weeks and you will see how much 
 
 ## Write Meaningful Names
 
-We name things all the time, we name our variables, functions, class, arguments, and files, because of it we need to do this well.
+**We name things all the time**, we name our variables, functions, class, arguments, and files, because of it we need to do this well.
 
 This topic is so important that [Uncle Bob](https://twitter.com/unclebobmartin) wrote an entire chapter about it in the [Clean Code book](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
 
@@ -54,30 +58,30 @@ See some examples:
 **Bad names**:
 
 ```js
-const x = 5;
-const list = [];
-const cName = 'Jose';
-const genDate = '2019-03-11';
+const x = 5
+const list = []
+const cName = 'Jose'
+const genDate = '2019-03-11'
 ```
 
 **Good names**:
 
 ```js
-const elapsedTimeInDays = 5;
-const accounts = [];
-const customerName = 'Jose';
-const generatedDate = '2019-03-11';
+const elapsedTimeInDays = 5
+const accounts = []
+const customerName = 'Jose'
+const generatedDate = '2019-03-11'
 ```
 
-Don't worry if you spend to much time thinking about name of just variable, it's completely normal, but I guarantee it will be worth it.
+**Don't worry if you spend so much time thinking about name** of a just variable, it's completely normal, but I guarantee it will be worth it.
 
 **Remember**: The name of things is like a joke if the name requires a comment for explanation, it is because the name is not good enough.
 
 ## Early returns
 
-Always you have a chance to get out of a function do it as soon as possible, the main goal is to get out of the way invalid cases first to focus on the "real" purpose of the function.
+**Always you have a chance to get out of a function do it as soon as possible**, the main goal is to get out of the way invalid cases first to focus on the "real" purpose of the function.
 
-it's very simple to implement Early return, the only thing you have to do is to inserve conditions.
+it's very simple to implement Early return, the only thing you have to do is to reverse conditions.
 
 Look the example below with many nested if/else statements:
 
@@ -333,10 +337,9 @@ You can use some plugin in your preferred editor or IDE to formatting your code 
 
 ## Conclusion
 
-As you can see, the major of these tips are really connected, so when you're applying one tip unconsciously you'll apply other one, all of these tips will help you to write a better code in a natural way,  
+As you can see, the major of these tips are really connected, so when you're applying one tip unconsciously you'll apply another one, all of these tips will help you to write a better code in a natural way,  
 
-
-more readable, testable and will improve the maintainability of your project. spend much more time reading code than writing.
+We spend much more time reading code than writing, so write a better code means that you in the future thank you.
 
 ## References
 
