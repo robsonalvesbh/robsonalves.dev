@@ -143,25 +143,17 @@ It's up to you, choose what you prefer.
 
 ## Avoid using ELSE
 
-When you use IF/ELSE statement you are creating multiples ways that the execution of your code can follow and this increase the cyclomatic complexity.
+When you use IF/ELSE statement you are creating multiples ways that the execution of your code can follow and this increase the [Cyclomatic Complexity](https://www.perforce.com/blog/qac/what-cyclomatic-complexity).
 
-This approach will help you to decrease the cyclomatic complexity of your code, turn it more readable.
+![hadouken code](assets/img/0_wjwy84monqqzzhkj.png)
 
-* Avoid code duplication
-* Code more readable
-* Decrease bugs
-
-Example:
-
-https://www.perforce.com/blog/qac/what-cyclomatic-complexity
+This approach will help you to decrease the Cyclomatic Complexity of your code and turn it more readable.
 
 How do I eliminate the else? Applying the early return.
 
 ## Only one level of indentation per method
 
 This tip will help you to keep your functions small, more readable, and easy to compile the code in your head.
-
-![hadouken code](assets/img/0_wjwy84monqqzzhkj.png)
 
 Let’s apply the rule to the code:
 
