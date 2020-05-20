@@ -151,6 +151,26 @@ This approach will help you to decrease the Cyclomatic Complexity of your code a
 
 How do I eliminate the else? Applying the early return.
 
+Other example that ELSE it's not necessary:
+
+```php
+function someFunction {
+  if (someCondition()) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+
+It is quite common to find code like this, but think, if your condition will be true then you will return `true`, why dot not just return the condition result instead?
+
+```php
+function someFunction {
+  return someCondition();
+}
+```
+
 ## Only one level of indentation per method
 
 This tip will help you to keep your functions small, more readable, and easy to compile the code in your head.
