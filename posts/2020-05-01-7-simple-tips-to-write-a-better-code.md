@@ -1,5 +1,5 @@
 ---
-title: X simple tips to write a better code
+title: 7 simple tips to write a better code
 description: >-
   Throughout my 6+ years as a software engineer I learned some tips that helped
   me to improve the quality of my code and make it more readable, testable,
