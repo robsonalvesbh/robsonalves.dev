@@ -11,7 +11,8 @@ tags:
   - English
 image: assets/img/return_early_functions_placeholders.png
 ---
-![readable code](assets/img/return_early_functions_placeholders.png "readable code")
+
+![readable code](assets/img/return_early_functions_placeholders.png 'readable code')
 
 There are several ways to troubleshoot a problem. Why do we sometimes choose the path that is so difficult to understand that we ourselves don't understand if we see the code we wrote six months later?
 
@@ -23,14 +24,13 @@ My advice to you is to try it, try it for at least a few weeks.
 
 ## Tips
 
-* [Write Meaningful Names](#write-meaningful-names)
-* [Early returns](#early-returns)
-* [Avoid using ELSE](#avoid-using-else)
-* [Only one level of indentation per method](#only-one-level-of-indentation-per-method)
-* [Avoid setting value Hard Coding](#avoid-to-set-value-hard-coding)
-* [Extract hard-coding secrets values](#extract-hard-coding-secrets-values)
-* [Encapsulate conditions](#encapsulate-conditions)
-* [Follow a style guide](#follow-a-style-guide)
+- [Write Meaningful Names](#write-meaningful-names)
+- [Early returns](#early-returns)
+- [Avoid using ELSE](#avoid-using-else)
+- [Only one level of indentation per method](#only-one-level-of-indentation-per-method)
+- [Avoid setting value Hard Coding](#avoid-to-set-value-hard-coding)
+- [Encapsulate conditions](#encapsulate-conditions)
+- [Follow a style guide](#follow-a-style-guide)
 
 ## Write Meaningful Names
 
@@ -40,16 +40,16 @@ This topic is so important that [Uncle Bob](https://twitter.com/unclebobmartin) 
 
 To write meaningful names you can follow some rules:
 
-* Use pronounceable names
-* Use searchable names
-* Do not use abbreviations
-* Function names should be verbs
+- Use pronounceable names
+- Use searchable names
+- Do not use abbreviations
+- Function names should be verbs
 
 The chosen name should answer these questions:
 
-* Why does it exist?
-* What is it does?
-* How is it used?
+- Why does it exist?
+- What is it does?
+- How is it used?
 
 The name should reveal its intention.
 
@@ -151,6 +151,26 @@ This approach will help you to decrease the Cyclomatic Complexity of your code a
 
 How do I eliminate the else? Applying the early return.
 
+Other example that ELSE it's not necessary:
+
+```php
+function someFunction {
+  if (someCondition()) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+
+It is quite common to find code like this, but think, if your condition will be true then you will return `true`, why dot not just return the condition result instead?
+
+```php
+function someFunction {
+  return someCondition();
+}
+```
+
 ## Only one level of indentation per method
 
 This tip will help you to keep your functions small, more readable, and easy to compile the code in your head.
@@ -235,40 +255,6 @@ if (user.profile === DEVELOPER_PROFILE_ID) {
 
 Now, our code to explicit what it does, is easier to understand and you can reuse the constant `DEVELOPER_PROFILE_ID` in other parts of the code.
 
-## Extract hard-coding secrets values
-
-Other context that you must avoid hard coding is in secrets values.
-
-```js
-const connection = mysql.createConnection({
-  host: 'yourhost',
-  user: 'yourusername',
-  password: 'yourpassword'
-})
-```
-
-In a collaborative environment (e.g., work, or open source) this is not a good practice at all, you are exposed and anyone can get your database access direct from your repository.
-
-When you work with multiple repositories that can be a problem also, you probably will have a secret for each environment (development, homologation and production).
-
-A good practice is to make your code more flexible and extracting the secrets to an environment variables, take a look at the example below:
-
-```js
-const MYSQL_HOST = process.env.MYSQL_HOST
-const MYSQL_USER = process.env.MYSQL_USER
-const MYSQL_PASSWORD = process.env.MYSQL_PASSWORD
-
-const connection = mysql.createConnection({
-  host: MYSQL_HOST,
-  user: MYSQL_USER,
-  password: MYSQL_PASSWORD
-})
-```
-
-To define the value of environment variables, you can use a lib as [dotenv](https://www.npmjs.com/package/dotenv), it's very easy to find that lib for your preferred language.
-
-I recommend that you take a look at a tool like [Consul](https://www.consul.io/docs/commands/index.html#environment-variables) to manage your environment variables. With this tool, you can change the secret value in hot production without needing a new deployment.
-
 ## Encapsulate conditions
 
 Encapsulating conditions is a way to spell out your intention and what you want to validate, and code with encapsulated conditionals is easier to test.
@@ -313,29 +299,29 @@ No matter what language you are coding, there is probably a style guide for it, 
 
 PHP
 
-* [PSR-1](https://www.php-fig.org/psr/psr-1/)
-* [PSR-12](https://www.php-fig.org/psr/psr-12/)
+- [PSR-1](https://www.php-fig.org/psr/psr-1/)
+- [PSR-12](https://www.php-fig.org/psr/psr-12/)
 
 NodeJS
 
-* [StandardJS](https://standardjs.com/)
-* [Airbnb](https://github.com/airbnb/javascript)
+- [StandardJS](https://standardjs.com/)
+- [Airbnb](https://github.com/airbnb/javascript)
 
 Python
 
-* [PEP-8](https://www.python.org/dev/peps/pep-0008/)
+- [PEP-8](https://www.python.org/dev/peps/pep-0008/)
 
 You can use some plugin in your preferred editor or IDE to formatting your code automatically when coding and you can use a Lint in your deployment pipeline to validate your code before merging into the master branch.
 
 ## Conclusion
 
-As you can see, the major of these tips are really connected, so when you're applying one tip unconsciously you'll apply another one, all of these tips will help you to write a better code in a natural way,  
+As you can see, the major of these tips are really connected, so when you're applying one tip unconsciously you'll apply another one, all of these tips will help you to write a better code in a natural way,
 
 We spend much more time reading code than writing, so write a better code means that you in the future thank you.
 
 ## References
 
-* https://medium.com/mindorks/meaningful-names-a-dimension-of-writing-clean-code-fdae1ae4f0b1
-* https://szymonkrajewski.pl/why-should-you-return-early/
-* https://williamdurand.fr/2013/06/03/object-calisthenics/#1-only-one-level-of-indentation-per-method
-* https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
+- https://medium.com/mindorks/meaningful-names-a-dimension-of-writing-clean-code-fdae1ae4f0b1
+- https://szymonkrajewski.pl/why-should-you-return-early/
+- https://williamdurand.fr/2013/06/03/object-calisthenics/#1-only-one-level-of-indentation-per-method
+- https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
