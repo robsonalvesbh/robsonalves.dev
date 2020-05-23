@@ -4,7 +4,7 @@ description: >-
   There are several ways to troubleshoot a problem, and sometimes we write the hardest solution to understand that even ourselves have difficulty in understanding when we see the code six months later, that happens and it is not our fault, but, there are some tips that we can apply to naturally improve the quality of the code we’re working on, and make it more readable, testable, maintainable, and easy to understand.
 date: '2020-04-22 10:09:22'
 tags:
-  - English
+  - Career, Clean Code, English
 image: assets/img/return_early_functions_placeholders.png
 ---
 
