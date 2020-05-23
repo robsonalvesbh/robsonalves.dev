@@ -1,11 +1,7 @@
 ---
 title: 7 simple tips to write a better code
 description: >-
-  Throughout my 6+ years as a software engineer I learned some tips that helped
-  me to improve the quality of my code and make it more readable, testable,
-  maintainable, and easy to understand. I decided to compile all these tips in a
-  way to be agnostic of design patterns or programming paradigm and that could
-  be applied in any programming language.
+  There are several ways to troubleshoot a problem, and sometimes we write the hardest solution to understand that even ourselves have difficulty in understanding when we see the code six months later, that happens and it is not our fault, but, there are some tips that we can apply to naturally improve the quality of the code we’re working on, and make it more readable, testable, maintainable, and easy to understand.
 date: '2020-04-22 10:09:22'
 tags:
   - English
