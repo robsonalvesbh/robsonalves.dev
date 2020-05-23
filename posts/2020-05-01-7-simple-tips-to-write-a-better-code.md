@@ -14,13 +14,11 @@ image: assets/img/return_early_functions_placeholders.png
 
 ![readable code](assets/img/return_early_functions_placeholders.png 'readable code')
 
-There are several ways to troubleshoot a problem. Why do we sometimes choose the path that is so difficult to understand that we ourselves don't understand if we see the code we wrote six months later?
+There are several ways to troubleshoot a problem, and sometimes we write the hardest solution to understand that even ourselves have difficulty in understanding when we see the code six months later, that happens and it is not our fault, but, there are some tips that we can apply to naturally improve the quality of the code we’re working on, and make it more readable, testable, maintainable, and easy to understand.
 
-There are some tips we can apply to naturally improve the quality of the code we’re working on, and make it more readable, testable, maintainable, and easy to understand.
+I decided to compile all tips that I've learned throughout my journey as a software engineer and I will try to write in a way to be agnostic of design patterns or programming paradigm and that could be applied in any programming language.
 
-I decided to compile all tips I've learned throughout my 6+ years as a software engineer and I try to write in a way to be agnostic of design patterns or programming paradigm and that could be applied in any programming language.
-
-My advice to you is to try it, try it for at least a few weeks.
+My advice to you is try it, try it for at least a few weeks.
 
 ## Tips
 
@@ -58,7 +56,7 @@ See some examples:
 **Bad names**:
 
 ```js
-const x = 5
+const x = 5 
 const list = []
 const cName = 'Jose'
 const genDate = '2019-03-11'
@@ -117,7 +115,7 @@ const sendEmail = (email, message) => {
 
 In some cases, using early returns can be optional.
 
-Either you do:
+Either you can do:
 
 ```js
 const setName = name => {
@@ -143,13 +141,13 @@ It's up to you, choose what you prefer.
 
 ## Avoid using ELSE
 
-When you use IF/ELSE statement you are creating multiples ways that the execution of your code can follow and this increase the [Cyclomatic Complexity](https://www.perforce.com/blog/qac/what-cyclomatic-complexity).
+When you use if/else statement you are creating multiples ways that the execution of your code can follow and this increase the [Cyclomatic Complexity](https://www.perforce.com/blog/qac/what-cyclomatic-complexity).
 
 ![hadouken code](assets/img/0_wjwy84monqqzzhkj.png)
 
 This approach will help you to decrease the Cyclomatic Complexity of your code and turn it more readable.
 
-How do I eliminate the else? Applying the early return.
+How do I eliminate the else? Applying the [early returns](#early-returns).
 
 Other example that ELSE it's not necessary:
 
@@ -163,7 +161,7 @@ function someFunction {
 }
 ```
 
-It is quite common to find code like this, but think, if your condition will be true then you will return `true`, why dot not just return the condition result instead?
+It is quite common to find code like this, but think, if your condition will be true then you will return `true`, why do not just return the condition result instead?
 
 ```php
 function someFunction {
@@ -175,7 +173,7 @@ function someFunction {
 
 This tip will help you to keep your functions small, more readable, and easy to compile the code in your head.
 
-Let’s apply the rule to the code:
+Let’s see an example:
 
 ```java
 class Board {
