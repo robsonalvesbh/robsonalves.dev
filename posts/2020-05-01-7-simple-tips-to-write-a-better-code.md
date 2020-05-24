@@ -1,7 +1,7 @@
 ---
 title: 7 simple tips to write a better code
 description: >-
-  There are several ways to troubleshoot a problem, and sometimes we write the hardest solution to understand that even ourselves have difficulty in understanding when we see the code six months later, that happens and it is not our fault, but, there are some tips that we can apply to naturally improve the quality of the code we’re working on, and make it more readable, testable, maintainable, and easy to understand.
+  There are several ways to troubleshoot a problem, and sometimes we write the hardest solution to understand that even ourselves have difficulty in understanding when we see the code six months later, that happens and it is not our fault, but there are some tips that we can apply to naturally improve the quality of the code we’re working on and make it more readable, testable, maintainable, and easy to understand.
 date: '2020-04-22 10:09:22'
 tags:
   - Career
@@ -313,7 +313,7 @@ You can use some plugin in your preferred editor or IDE to formatting your code 
 
 As you can see, the major of these tips are really connected, so when you're applying one tip unconsciously you'll apply another one, all of these tips will help you to write a better code in a natural way.
 
-We spend much more time reading code than writing, so write a better code means that you in the future thank you.
+We spend much more time reading code than writing, so write a better code means that you in the future will thank you.
 
 ## References
 
