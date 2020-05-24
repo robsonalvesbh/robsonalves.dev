@@ -4,17 +4,19 @@ description: >-
   There are several ways to troubleshoot a problem, and sometimes we write the hardest solution to understand that even ourselves have difficulty in understanding when we see the code six months later, that happens and it is not our fault, but, there are some tips that we can apply to naturally improve the quality of the code we’re working on, and make it more readable, testable, maintainable, and easy to understand.
 date: '2020-04-22 10:09:22'
 tags:
-  - Career, Clean Code, English
+  - Career
+  - Clean Code
+  - English
 image: assets/img/return_early_functions_placeholders.png
 ---
 
 ![readable code](assets/img/return_early_functions_placeholders.png 'readable code')
 
-There are several ways to troubleshoot a problem, and sometimes we write the hardest solution to understand that even ourselves have difficulty in understanding when we see the code six months later, that happens and it is not our fault, but, there are some tips that we can apply to naturally improve the quality of the code we’re working on, and make it more readable, testable, maintainable, and easy to understand.
+There are several ways to troubleshoot a problem, and sometimes we write the hardest solution to understand that even ourselves have difficulty in understanding when we see the code six months later, that happens and it is not our fault, but there are some tips that we can apply to naturally improve the quality of the code we’re working on and make it more readable, testable, maintainable, and easy to understand.
 
 I decided to compile all tips that I've learned throughout my journey as a software engineer and I will try to write in a way to be agnostic of design patterns or programming paradigm and that could be applied in any programming language.
 
-My advice to you is try it, try it for at least a few weeks.
+My advice to you is to try it, try it for at least a few weeks.
 
 ## Tips
 
@@ -28,21 +30,21 @@ My advice to you is try it, try it for at least a few weeks.
 
 ## Write Meaningful Names
 
-**We name things all the time**, we name our variables, functions, class, arguments, and files, because of it we need to do this well.
+**We name things all the time** we name our variables, functions, class, arguments, and files, because of it we need to do this well.
 
 This topic is so important that [Uncle Bob](https://twitter.com/unclebobmartin) wrote an entire chapter about it in the [Clean Code book](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
 
 To write meaningful names you can follow some rules:
 
-- Use pronounceable names
-- Use searchable names
-- Do not use abbreviations
-- Function names should be verbs
+- Use pronounceable names.
+- Use searchable names.
+- Do not use abbreviations.
+- Function names should be verbs.
 
 The chosen name should answer these questions:
 
 - Why does it exist?
-- What is it does?
+- What does it do?
 - How is it used?
 
 The name should reveal its intention.
@@ -52,7 +54,7 @@ See some examples:
 **Bad names**:
 
 ```js
-const x = 5 
+const x = 5
 const list = []
 const cName = 'Jose'
 const genDate = '2019-03-11'
@@ -67,15 +69,15 @@ const customerName = 'Jose'
 const generatedDate = '2019-03-11'
 ```
 
-**Don't worry if you spend so much time thinking about name** of a just variable, it's completely normal, but I guarantee it will be worth it.
+**Don't worry if you spend so much time thinking about the name** of a just variable, it's completely normal, but I guarantee it will be worth it.
 
-**Remember**: The name of things is like a joke if the name requires a comment for explanation, it is because the name is not good enough.
+**Remember**: The name of things is like a joke if the name requires a comment for an explanation, it is because the name is not good enough.
 
 ## Early returns
 
-**Always you have a chance to get out of a function do it as soon as possible**, the main goal is to get out of the way invalid cases first to focus on the "real" purpose of the function.
+**Always you have a chance to get out of a function, do it as soon as possible**. The main goal is to get out of the way invalid cases first to focus on the "real" purpose of the function.
 
-it's very simple to implement Early return, the only thing you have to do is to reverse conditions.
+It's very simple to implement Early return, the only thing you have to do is to reverse conditions.
 
 Look the example below with many nested if/else statements:
 
@@ -137,7 +139,7 @@ It's up to you, choose what you prefer.
 
 ## Avoid using ELSE
 
-When you use if/else statement you are creating multiples ways that the execution of your code can follow and this increase the [Cyclomatic Complexity](https://www.perforce.com/blog/qac/what-cyclomatic-complexity).
+When you use if/else statement you are creating multiples ways that the execution of your code can follow and this increases the [Cyclomatic Complexity](https://www.perforce.com/blog/qac/what-cyclomatic-complexity).
 
 ![hadouken code](assets/img/0_wjwy84monqqzzhkj.png)
 
@@ -145,7 +147,7 @@ This approach will help you to decrease the Cyclomatic Complexity of your code a
 
 How do I eliminate the else? Applying the [early returns](#early-returns).
 
-Other example that ELSE it's not necessary:
+Another example that ELSE it's not necessary:
 
 ```php
 function someFunction {
@@ -191,7 +193,7 @@ class Board {
 }
 ```
 
-Using the Extract Method pattern, we will extract all all the deepest levels.
+Using the Extract Method pattern, we will extract all the deepest levels.
 
 ```java
 class Board {
@@ -309,7 +311,7 @@ You can use some plugin in your preferred editor or IDE to formatting your code 
 
 ## Conclusion
 
-As you can see, the major of these tips are really connected, so when you're applying one tip unconsciously you'll apply another one, all of these tips will help you to write a better code in a natural way,
+As you can see, the major of these tips are really connected, so when you're applying one tip unconsciously you'll apply another one, all of these tips will help you to write a better code in a natural way.
 
 We spend much more time reading code than writing, so write a better code means that you in the future thank you.
 
