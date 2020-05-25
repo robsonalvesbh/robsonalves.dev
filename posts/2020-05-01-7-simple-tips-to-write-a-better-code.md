@@ -272,7 +272,7 @@ Follow below an example of a unit test of isDeveloper function:
 ```js
 test('should return true when the user has a developer profile', () => {
   const user = {
-    profile: 'developer'
+    profile: 956473
   }
 
   expect(isDeveloper(user)).toBeTruthy()
@@ -280,7 +280,7 @@ test('should return true when the user has a developer profile', () => {
 
 test('should return false when the user has not a developer profile', () => {
   const user = {
-    profile: 'designer'
+    profile: 123456
   }
 
   expect(isDeveloper(user)).toBeFalsy()
