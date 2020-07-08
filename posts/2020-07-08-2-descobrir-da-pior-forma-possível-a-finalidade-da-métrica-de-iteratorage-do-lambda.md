@@ -4,16 +4,18 @@ title: "#2 - Descobrir da pior forma possível a finalidade da métrica de
 description: Fala pessoal, como vocês estão? Dando seguimento a série sobre
   Serverless, resolvi compartilhar com vocês um breve relato de uma experiência
   que tive esses dias relacionado a processamento de dados via stream com
-  funções lambdas.
-date: 2020-07-08T12:14:57.000Z
+  funções lambdas e como eu descobrir da pior forma possível a finalidade da
+  métrica de IteratorAge do lambda.
+date: 2020-07-08 07:48:50
 tags:
   - Serverless
   - Escalabilidade
+  - Stream
 image: assets/img/screen-shot-2020-07-07-at-21.47.24.png
 ---
-Fala pessoal, como vocês estão? Dando seguimento a série sobre Serverless, resolvi compartilhar com vocês um breve relato de uma experiência que tive esses dias relacionado a processamento de dados via stream com funções lambdas.
+Fala pessoal, como vocês estão? Dando seguimento a série sobre Serverless, resolvi compartilhar com vocês um breve relato de uma experiência que tive esses dias relacionado a processamento de dados via stream com funções lambdas e como eu descobrir da pior forma possível a finalidade da métrica de IteratorAge do lambda.
 
-Nosso time é um dos maiores heavy users de Serverless da empresa, possuímos facilmente mais de 20 funções lambdas no core de nossa stack e eu ainda não tinha parado para entender a finalidade da métrica de IteratorAge que a AWS disponibiliza para cada função, até porque ela sempre ficava sem dados disponíveis como na imagem abaixo:
+Nosso time é um dos maiores heavy users de Serverless da empresa, possuímos facilmente mais de 20 funções lambdas no core de nossa stack e eu ainda não tinha parado para entender a finalidade da métrica de IteratorAge que a AWS disponibiliza para cada função, até porque ela sempre ficava sem dados disponíveis, como na imagem abaixo:
 
 ![Gráfico do iteratorAge sem dados disponíveis](assets/img/screen-shot-2020-07-07-at-21.47.58.png "Gráfico do iteratorAge sem dados disponíveis")
 
@@ -34,3 +36,5 @@ Para resolver o incidente, alterei o código da função para que ela pudesse tr
 Dessa forma além de processar um lote maior por vez a função passou a processar paralelamente vários lotes, aumentando assim a capacidade de vazão da minha função, pouco tempo depois da publicação do hotfix o tempo do iteratorAge caiu para menos de 50 milissegundos.
 
 Com estas duas alterações resolvemos o incidente e por último criei um alerta no cloudwatch para notificar o time caso o tempo do iteratorAge comece a aumentar.
+
+Bom galera, é isso aí, espero que tenham curtido este formato, feedbacks são bem vindos!!!
